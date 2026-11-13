@@ -105,11 +105,20 @@ a.tag:hover{background:var(--mango)}
 .when{display:block;font-size:15px;font-weight:650;color:var(--ink);margin-top:2px}
 
 /* tickets */
-.tickets{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;margin:8px 0 12px}
-.ticket{position:relative;background:var(--white);border-radius:18px;padding:18px 20px 18px 24px;font-weight:700;font-size:19px;line-height:1.25;overflow:hidden}
-.ticket::before{content:"";position:absolute;left:0;top:0;bottom:0;width:8px;background:var(--c,var(--mango))}
-.ticket::after{content:"";position:absolute;right:-11px;top:50%;width:22px;height:22px;border-radius:50%;background:var(--mist);transform:translateY(-50%)}
-.ticket span{display:block;font-weight:450;font-size:15px;color:var(--ink-soft);margin-top:4px}
+.tickets{display:grid;grid-template-columns:repeat(2,1fr);gap:16px 14px;margin:14px 0 16px}
+.ticket{--notch:var(--mist);position:relative;display:flex;min-height:118px;background:var(--c);color:var(--t);border-radius:16px;transform:rotate(-1.2deg);transition:transform .25s ease;
+  -webkit-mask:radial-gradient(circle 11px at calc(100% - 78px) 0,#0000 98%,#000) top/100% 51% no-repeat,radial-gradient(circle 11px at calc(100% - 78px) 100%,#0000 98%,#000) bottom/100% 51% no-repeat;
+  mask:radial-gradient(circle 11px at calc(100% - 78px) 0,#0000 98%,#000) top/100% 51% no-repeat,radial-gradient(circle 11px at calc(100% - 78px) 100%,#0000 98%,#000) bottom/100% 51% no-repeat}
+.ticket:nth-child(even){transform:rotate(1.3deg)}
+.ticket:hover{transform:rotate(0) translateY(-3px)}
+.tk-main{flex:1;padding:16px 18px 16px 20px;display:flex;flex-direction:column;justify-content:center;min-width:0}
+.tk-no{font-size:13px;font-weight:650;opacity:.7;margin-bottom:4px;font-variant-numeric:tabular-nums}
+.tk-main b{font-size:21px;line-height:1.12;font-weight:780;letter-spacing:-.015em}
+.tk-sub{font-size:15px;margin-top:5px;opacity:.82;line-height:1.3}
+.tk-stub{flex:none;width:78px;display:grid;place-items:center;border-left:2px dashed color-mix(in srgb,var(--t) 40%,transparent)}
+.tk-stub svg{width:34px;height:34px}
+@media (max-width:600px){.tickets{grid-template-columns:1fr}.ticket,.ticket:nth-child(even){transform:rotate(0)}}
+@media (prefers-reduced-motion:reduce){.ticket,.ticket:nth-child(even){transform:none}}
 
 /* timeline */
 .tl{list-style:none;margin:10px 0 12px;padding:0;position:relative}
@@ -119,6 +128,12 @@ a.tag:hover{background:var(--mango)}
 .tl li.now::before{background:var(--pink);border-color:var(--pink)}
 .tl .yr{font-weight:750;font-size:16px;padding-top:2px;font-variant-numeric:tabular-nums}
 .tl h4{margin:0;font-size:20px;font-weight:720;line-height:1.25}
+.tl li:nth-child(4n+1){--h:#E0336A}
+.tl li:nth-child(4n+2){--h:#6A4FD8}
+.tl li:nth-child(4n+3){--h:#D9670B}
+.tl li:nth-child(4n+4){--h:#14915A}
+.tl li h4{color:var(--h,var(--ink))}
+.tl li:not(.now)::before{border-color:var(--h,var(--ink))}
 .tl p{margin:3px 0 0;font-size:16px;color:var(--ink-soft);max-width:34em}
 
 /* skills */
@@ -404,12 +419,12 @@ footer a{font-weight:650}
     <div class="msg me q"><div class="b" id="q-off">Can you take it off the screen too?</div></div>
     <div class="msg them"><div class="b">That's my favourite part. Some of what I've helped dream up, promote and run with creators:</div></div>
     <div class="tickets">
-      <div class="ticket" style="--c:var(--mango)">Street runs<span>Community runs with creators</span></div>
-      <div class="ticket" style="--c:var(--pink)">Pickleball activations<span>Brand moments on court</span></div>
-      <div class="ticket" style="--c:var(--lav)">A friendship-themed race<span>Run with your people</span></div>
-      <div class="ticket" style="--c:var(--ink)">Influencer trips<span>Creators, one itinerary</span></div>
-      <div class="ticket" style="--c:#2BC27C">Free hearing-screening camps<span>At old-age homes, for a healthcare client</span></div>
-      <div class="ticket" style="--c:var(--mango)">Billboards and pamphlets<span>Offline ads that match the online story</span></div>
+      <div class="ticket" style="--c:var(--mango);--t:var(--ink)"><div class="tk-main"><span class="tk-no">No. 01</span><b>Street runs</b><span class="tk-sub">Community runs with creators</span></div><div class="tk-stub" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 4a2 2 0 1 0 4 0 2 2 0 0 0-4 0M7 21l3-6 3 2v5M10 15l1-5 4 3 3-1M11 10l-3 1-2 3"/></svg></div></div>
+      <div class="ticket" style="--c:var(--pink);--t:#fff"><div class="tk-main"><span class="tk-no">No. 02</span><b>Pickleball activations</b><span class="tk-sub">Brand moments on court</span></div><div class="tk-stub" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="6"/><path d="M13.5 13.5 20 20M7 8h.01M10 7h.01M9 11h.01"/></svg></div></div>
+      <div class="ticket" style="--c:var(--lav);--t:var(--ink)"><div class="tk-main"><span class="tk-no">No. 03</span><b>A friendship-themed race</b><span class="tk-sub">Run with your people</span></div><div class="tk-stub" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></div></div>
+      <div class="ticket" style="--c:var(--ink);--t:#fff"><div class="tk-main"><span class="tk-no">No. 04</span><b>Influencer trips</b><span class="tk-sub">Creators, one itinerary</span></div><div class="tk-stub" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13l18-8-6 16-3-7-9-1z"/></svg></div></div>
+      <div class="ticket" style="--c:#2BC27C;--t:#0F2D22"><div class="tk-main"><span class="tk-no">No. 05</span><b>Free hearing-screening camps</b><span class="tk-sub">At old-age homes, for a healthcare client</span></div><div class="tk-stub" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 9a5 5 0 0 1 10 0c0 3-3 4-3 7a3 3 0 0 1-6 0M10 9a2 2 0 0 1 4 0"/></svg></div></div>
+      <div class="ticket" style="--c:#FF8A3D;--t:var(--ink)"><div class="tk-main"><span class="tk-no">No. 06</span><b>Billboards and pamphlets</b><span class="tk-sub">Offline ads that match the online story</span></div><div class="tk-stub" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="11" rx="1.5"/><path d="M8 15v5M16 15v5M7 9h10"/></svg></div></div>
     </div>
     <div class="msg them"><div class="b">I handle the idea, the promotion, the creator coordination and the posts around it, so the event and the feed tell the same story.</div></div>
   </section>
