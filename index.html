@@ -218,10 +218,10 @@ footer a{font-weight:650}
 .feedhead{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:18px 0 8px}
 .feedhead h3{margin:0;font-size:20px;font-weight:720}
 .feedhead a{font-size:15px;font-weight:650}
-.igshot{display:block;margin:2px 22px 6px 92px;border-radius:18px;overflow:hidden;background:#0D1014;text-decoration:none;position:relative;box-shadow:0 0 0 1px #E1E3EF;transition:transform .2s ease,box-shadow .2s ease}
-.igshot img{display:block;width:100%;height:auto;aspect-ratio:1110/375}
-.igshot span{display:block;padding:10px 16px;background:#0D1014;color:#fff;font-size:14px;font-weight:650;border-top:1px solid rgba(255,255,255,.08)}
-.igshot:hover{transform:translateY(-2px);box-shadow:0 0 0 3px var(--mango)}
+.igshot{display:block;margin:4px 22px 8px 92px;border-radius:20px;overflow:hidden;background:#fff;text-decoration:none;border:4px solid var(--b,var(--mango));transition:transform .2s ease,box-shadow .2s ease}
+.igshot img{display:block;width:100%;height:auto;aspect-ratio:980/500}
+.igshot span{display:block;padding:10px 16px;background:var(--b,var(--mango));color:var(--bt,var(--ink));font-size:14px;font-weight:700}
+.igshot:hover{transform:translateY(-2px);box-shadow:0 8px 0 -2px color-mix(in srgb,var(--b) 35%,transparent)}
 
 /* own feed grid: embeds cropped to the photo */
 .igrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0 16px}
@@ -381,7 +381,7 @@ footer a{font-weight:650}
         <li>Finding and coordinating micro and nano creators, and keeping brand and creator on the same page</li>
         <li>Helping build original content IPs: formats and recurring content properties</li>
       </ul>
-      <a class="igshot" href="https://www.instagram.com/inflooo/" target="_blank" rel="noopener"><img src="assets/profile-inflooo.webp" alt="Inflooo on Instagram: profile, followers and bio" width="1110" height="375" loading="lazy"><span>Open @inflooo on Instagram</span></a>
+      <a class="igshot" style="--b:#FFB627;--bt:var(--ink)" href="https://www.instagram.com/inflooo/" target="_blank" rel="noopener"><img src="assets/profile-inflooo.webp" alt="Inflooo on Instagram: profile, followers and bio" width="980" height="500" loading="lazy"><span>Open @inflooo on Instagram</span></a>
       <div class="foot">
         <span class="tag" style="background:#FFF1D1">Influencer marketing company, Hyderabad</span>
         <a class="tag" href="https://inflooo.com/" target="_blank" rel="noopener">inflooo.com</a>
@@ -399,7 +399,7 @@ footer a{font-weight:650}
         <li>New post and reel formats to grow organic reach</li>
         <li>Promoting series launches and tracking audience growth</li>
       </ul>
-      <a class="igshot" href="https://www.instagram.com/southindianlogic/" target="_blank" rel="noopener"><img src="assets/profile-sil.webp" alt="South Indian Logic on Instagram: profile, followers and bio" width="1110" height="375" loading="lazy"><span>Open @southindianlogic on Instagram</span></a>
+      <a class="igshot" style="--b:#F2547D;--bt:#fff" href="https://www.instagram.com/southindianlogic/" target="_blank" rel="noopener"><img src="assets/profile-sil.webp" alt="South Indian Logic on Instagram: profile, followers and bio" width="980" height="500" loading="lazy"><span>Open @southindianlogic on Instagram</span></a>
       <div class="foot">
         <span class="tag" style="background:#FDE0E8">Telugu entertainment studio</span>
         <a class="tag" href="https://www.instagram.com/southindianlogic/" target="_blank" rel="noopener">@southindianlogic</a>
@@ -418,7 +418,7 @@ footer a{font-weight:650}
         <li>I built the positioning, identity and visual direction</li>
         <li>Short videos that explain HMDA, RERA, DTCP, EC, patta, mutation and property papers in plain language</li>
       </ul>
-      <a class="igshot" href="https://www.instagram.com/legit.spaces/" target="_blank" rel="noopener"><img src="assets/profile-legit.webp" alt="Legit Spaces on Instagram: profile, followers and bio" width="1110" height="375" loading="lazy"><span>Open @legit.spaces on Instagram</span></a>
+      <a class="igshot" style="--b:#6A4FD8;--bt:#fff" href="https://www.instagram.com/legit.spaces/" target="_blank" rel="noopener"><img src="assets/profile-legit.webp" alt="Legit Spaces on Instagram: profile, followers and bio" width="980" height="500" loading="lazy"><span>Open @legit.spaces on Instagram</span></a>
       <div class="foot">
         <span class="tag" style="background:var(--lav)">Real estate media</span>
         <a class="tag" href="https://www.instagram.com/legit.spaces/" target="_blank" rel="noopener">@legit.spaces</a>
@@ -517,7 +517,6 @@ footer a{font-weight:650}
   </section>
 </main>
 
-<footer>Site by <a href="https://vamshicreates.tech" target="_blank" rel="noopener">Vamshi Creates</a></footer>
 
 <script>
 (function(){

@@ -6,4 +6,3 @@ ending in a composer that opens WhatsApp with the visitor's note.
 
 Static HTML, no build step. Deployed on Vercel.
 
-Site by [Vamshi Creates](https://vamshicreates.tech).
