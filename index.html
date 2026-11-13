@@ -139,7 +139,7 @@ a.tag:hover{background:var(--mango)}
 .tl p{margin:3px 0 0;font-size:16px;color:var(--ink-soft);max-width:34em}
 
 /* skills */
-.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:6px 0 12px}
+.skills{display:grid;grid-template-columns:1fr;gap:12px;margin:6px 0 12px}
 .skill{background:var(--c,#fff);color:var(--t,var(--ink));border-radius:26px;padding:20px 22px}
 .skill:last-child:nth-child(odd){grid-column:1/-1}
 .skill.s1{--c:var(--ink);--t:#fff;--p:rgba(255,255,255,.14)}
@@ -220,6 +220,15 @@ footer a{font-weight:650}
 .feedhead a{font-size:15px;font-weight:650}
 .card .feed{padding:0 22px 16px 92px;margin:0}
 
+/* own feed grid: embeds cropped to the photo */
+.igrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0 16px}
+.tile{position:relative;aspect-ratio:3/4;border-radius:18px;overflow:hidden;background:linear-gradient(135deg,var(--lav),#F6D7E2)}
+.tile iframe{position:absolute;left:0;top:0;width:400px;height:600px;border:0;transform-origin:0 0;pointer-events:none}
+.tile a{position:absolute;inset:0;z-index:2;border-radius:18px}
+.tile a:hover{box-shadow:inset 0 0 0 4px var(--mango)}
+.igmore{display:inline-block}
+@media (max-width:600px){.igrid{grid-template-columns:repeat(2,1fr)}}
+
 /* poster wall */
 .posters{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:14px 0 6px}
 .poster{position:relative;display:block;border-radius:18px;overflow:hidden;aspect-ratio:16/9;background:var(--ink);text-decoration:none}
@@ -270,7 +279,7 @@ footer a{font-weight:650}
   <div class="wide" style="display:flex;align-items:center;gap:14px;height:68px">
     <div class="avatar" aria-hidden="true" style="background:url(assets/himisha.jpg) center 20%/cover"></div>
     <div class="who"><b>Himisha Talasila</b><span>Brand & marketing strategist in Hyderabad</span></div>
-    <a class="btn" href="#talk">Message me</a>
+    <a class="btn" href="#talk">Work with me</a>
   </div>
 </header>
 
@@ -351,8 +360,6 @@ footer a{font-weight:650}
     </div>
     <div class="msg them"><div class="b">At Inflooo I look after the digital presence of around <b>10 brand accounts</b>, each in a different industry with its own voice.</div></div>
     <div class="msg them"><div class="b">And on my own page, <a href="https://www.instagram.com/himishachowdary/" target="_blank" rel="noopener">@himishachowdary</a>, about <b>37K people</b> follow along.</div></div>
-    <div class="feedhead"><h3>From my feed</h3><a href="https://www.instagram.com/himishachowdary/" target="_blank" rel="noopener">Open @himishachowdary</a></div>
-    <div class="feed" data-posts="DfUXz24iUwc,DYZKXodxFXr,DOQoH_hE86I,DOd1ZpKgRq5,DewpLlBCchB,DegjgoLETJH,DeUPdn2Cb3d" aria-label="Posts from @himishachowdary"></div>
   </section>
 
   <!-- now -->
@@ -460,6 +467,21 @@ footer a{font-weight:650}
     </div>
     <div class="msg them"><div class="b">And I can talk to your audience in their language:</div></div>
     <div class="lang"><span>Telugu<small>Native</small></span><span>English<small>Professional</small></span><span>Hindi<small>Professional</small></span></div>
+  </section>
+
+  <!-- feed -->
+  <section id="feed" aria-labelledby="q-feed">
+    <div class="msg me q"><div class="b" id="q-feed">Before we talk, can I see your own feed?</div></div>
+    <div class="msg them"><div class="b">Of course. Here's a peek at <a href="https://www.instagram.com/himishachowdary/" target="_blank" rel="noopener">@himishachowdary</a>.</div></div>
+    <div class="igrid" aria-label="Posts from @himishachowdary">
+      <div class="tile" data-code="DfUXz24iUwc"><a href="https://www.instagram.com/p/DfUXz24iUwc/" target="_blank" rel="noopener" aria-label="Open this post on Instagram"></a></div>
+      <div class="tile" data-code="DewpLlBCchB"><a href="https://www.instagram.com/p/DewpLlBCchB/" target="_blank" rel="noopener" aria-label="Open this post on Instagram"></a></div>
+      <div class="tile" data-code="DegjgoLETJH"><a href="https://www.instagram.com/p/DegjgoLETJH/" target="_blank" rel="noopener" aria-label="Open this post on Instagram"></a></div>
+      <div class="tile" data-code="DeUPdn2Cb3d"><a href="https://www.instagram.com/p/DeUPdn2Cb3d/" target="_blank" rel="noopener" aria-label="Open this post on Instagram"></a></div>
+      <div class="tile" data-code="Dd3SNGJEdaN"><a href="https://www.instagram.com/p/Dd3SNGJEdaN/" target="_blank" rel="noopener" aria-label="Open this post on Instagram"></a></div>
+      <div class="tile" data-code="Dcv1PZwCdhG"><a href="https://www.instagram.com/p/Dcv1PZwCdhG/" target="_blank" rel="noopener" aria-label="Open this post on Instagram"></a></div>
+    </div>
+    <a class="chip igmore" href="https://www.instagram.com/himishachowdary/" target="_blank" rel="noopener">See more on Instagram</a>
   </section>
 
   <!-- talk -->
@@ -577,6 +599,22 @@ footer a{font-weight:650}
     var fo = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting) { fill(e.target); fo.unobserve(e.target); } }); }, { rootMargin: '600px 0px' });
     Array.prototype.forEach.call(feeds, function(f){ fo.observe(f); });
   } else { Array.prototype.forEach.call(feeds, fill); }
+
+  // own-feed tiles: load the embed, then scale it so only the photo shows
+  var tiles = document.querySelectorAll('.tile[data-code]');
+  function fit(t){ var f = t.querySelector('iframe'); if (!f) return; var s = t.clientWidth / 400; f.style.transform = 'translateY(' + (-54 * s) + 'px) scale(' + s + ')'; }
+  function loadTile(t){
+    if (t.querySelector('iframe')) return;
+    var f = document.createElement('iframe');
+    f.src = 'https://www.instagram.com/p/' + t.dataset.code + '/embed/';
+    f.title = 'Instagram post by @himishachowdary'; f.setAttribute('scrolling','no'); f.setAttribute('tabindex','-1');
+    t.insertBefore(f, t.firstChild); fit(t);
+  }
+  if ('IntersectionObserver' in window) {
+    var to = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting) { loadTile(e.target); to.unobserve(e.target); } }); }, { rootMargin: '600px 0px' });
+    Array.prototype.forEach.call(tiles, function(t){ to.observe(t); });
+  } else { Array.prototype.forEach.call(tiles, loadTile); }
+  window.addEventListener('resize', function(){ Array.prototype.forEach.call(tiles, fit); });
 
   // composer
   var note = document.getElementById('note'), nameEl = document.getElementById('name'), hint = document.getElementById('hint');
