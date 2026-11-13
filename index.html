@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Himisha Talasila — Brand & Marketing Strategist, Hyderabad</title>
+<meta name="description" content="Himisha Talasila Chowdary is a brand and marketing strategist and creative head in Hyderabad. She helped grow South Indian Logic's Instagram from 50K to 84K, runs brands at Inflooo and founded Legit Spaces.">
+<meta property="og:title" content="Say hi to Himisha">
+<meta property="og:description" content="Brand & marketing strategist, creative head and content creator in Hyderabad. Helped take South Indian Logic from 50K to 84K on Instagram.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#1E1A3D">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='32' fill='%23FFB627'/><text x='32' y='44' font-family='Arial' font-weight='800' font-size='34' text-anchor='middle' fill='%231E1A3D'>H</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --mist:#EDEFF8;
+  --ink:#1E1A3D;
+  --ink-soft:#4A4670;
+  --mango:#FFB627;
+  --pink:#F2547D;
+  --lav:#CFCBF2;
+  --white:#FFFFFF;
+  --col:760px;
+  --f:"Bricolage Grotesque", system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--mist);color:var(--ink);font-family:var(--f);font-size:18px;line-height:1.5;font-variation-settings:"opsz" 14;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--pink);outline-offset:3px;border-radius:6px}
+.wrap{max-width:var(--col);margin:0 auto;padding:0 20px}
+
+/* top bar */
+.bar{position:sticky;top:0;z-index:20;background:rgba(237,239,248,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(30,26,61,.08)}
+.bar .wrap{display:flex;align-items:center;gap:14px;height:68px}
+.avatar{width:42px;height:42px;border-radius:50%;background:var(--mango);display:grid;place-items:center;font-weight:800;font-size:20px;flex:none;position:relative}
+.who{line-height:1.2;min-width:0}
+.who b{display:block;font-size:17px;font-weight:700}
+.who span{font-size:14px;color:var(--ink-soft);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
+.bar .btn{margin-left:auto}
+.btn{display:inline-flex;align-items:center;gap:8px;font:inherit;font-weight:650;font-size:16px;background:var(--ink);color:var(--white);border:0;border-radius:999px;padding:11px 20px;text-decoration:none;cursor:pointer;white-space:nowrap;transition:transform .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn.alt{background:var(--white);color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+
+/* thread */
+.thread{padding:36px 0 40px}
+.day{text-align:center;font-size:14px;color:var(--ink-soft);margin:8px 0 28px}
+.msg{display:flex;margin:0 0 10px}
+.msg.me{justify-content:flex-end}
+.b{max-width:88%;padding:14px 20px;border-radius:26px;background:var(--white);font-size:clamp(19px,2.3vw,23px);line-height:1.38;font-variation-settings:"opsz" 24}
+.them .b{border-bottom-left-radius:8px}
+.me .b{background:var(--mango);border-bottom-right-radius:8px;font-weight:600;font-size:clamp(17px,2vw,20px)}
+.b.big{background:transparent;padding:4px 0 10px;font-size:clamp(40px,8.4vw,78px);line-height:.98;font-weight:780;letter-spacing:-.025em;font-variation-settings:"opsz" 96,"wdth" 88;max-width:100%}
+.b p{margin:0}
+.b p+p{margin-top:.6em}
+.b a{text-decoration-thickness:2px;text-underline-offset:3px;text-decoration-color:var(--pink)}
+.sent{font-size:13px;color:var(--ink-soft);text-align:right;margin:-4px 6px 18px}
+
+/* typing */
+.typing .b{display:inline-flex;gap:6px;padding:18px 22px}
+.typing i{width:9px;height:9px;border-radius:50%;background:var(--ink-soft);opacity:.4;animation:dot 1s infinite}
+.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes dot{50%{opacity:1;transform:translateY(-3px)}}
+.js .reveal{opacity:0;transform:translateY(10px)}
+.reveal.on{opacity:1;transform:none;transition:opacity .35s ease,transform .35s ease}
+
+/* quick replies */
+.chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end;margin:22px 0 0}
+.chip{font:inherit;font-size:16px;font-weight:600;color:var(--ink);background:transparent;border:2px solid var(--ink);border-radius:999px;padding:9px 16px;text-decoration:none;cursor:pointer;transition:background .15s}
+.chip:hover{background:var(--mango);border-color:var(--mango)}
+.chip.go{background:var(--ink);color:var(--white)}
+.chip.go:hover{background:var(--pink);border-color:var(--pink)}
+
+/* sections */
+section{padding:56px 0 24px}
+.q{margin-bottom:22px}
+
+/* growth */
+.growth{background:var(--ink);color:var(--white);border-radius:34px 34px 34px 10px;padding:30px clamp(22px,4vw,40px) 32px;margin:6px 0 12px;position:relative;overflow:hidden}
+.growth .nums{display:flex;align-items:baseline;flex-wrap:wrap;gap:.08em .3em;font-weight:800;letter-spacing:-.04em;line-height:.9;font-variation-settings:"opsz" 96,"wdth" 80}
+.growth .from{font-size:clamp(46px,10vw,96px);color:var(--lav);opacity:.6;text-decoration:line-through;text-decoration-thickness:.07em;text-decoration-color:var(--pink)}
+.growth .to{font-size:clamp(92px,23vw,220px);color:var(--mango)}
+.growth .to small{font-size:.42em;letter-spacing:-.02em}
+.growth .cap{font-size:clamp(18px,2.1vw,21px);max-width:34em;margin:18px 0 0;color:#E6E4F7}
+.growth .cap b{color:var(--white)}
+.growth .bars{display:flex;gap:6px;align-items:flex-end;height:54px;margin-top:22px}
+.growth .bars span{flex:1;background:var(--pink);border-radius:4px 4px 0 0;transform-origin:bottom}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.growth .chip{color:var(--white);border-color:rgba(255,255,255,.55)}
+.growth .chip:hover{color:var(--ink)}
+
+/* link preview attachment */
+.card{display:block;text-decoration:none;background:var(--white);border-radius:26px 26px 26px 8px;overflow:hidden;max-width:88%;margin:0 0 10px}
+.card .top{padding:22px 22px 18px;display:flex;gap:16px;align-items:flex-start}
+.mark{width:54px;height:54px;border-radius:16px;flex:none;display:grid;place-items:center;font-weight:800;font-size:19px;letter-spacing:-.02em}
+.card h3{margin:0;font-size:clamp(23px,3vw,30px);line-height:1.1;font-weight:760;letter-spacing:-.015em;font-variation-settings:"opsz" 48}
+.card .role{margin:5px 0 0;font-size:16px;color:var(--ink-soft)}
+.card ul{margin:0;padding:0 22px 4px 92px;list-style:none;font-size:17px}
+.card li{padding:6px 0;border-top:1px solid #E7E8F2}
+.card .foot{display:flex;flex-wrap:wrap;gap:8px;padding:16px 22px 22px 92px}
+.tag{font-size:14px;font-weight:650;padding:6px 12px;border-radius:999px;background:var(--mist);text-decoration:none}
+a.tag:hover{background:var(--mango)}
+.when{display:block;font-size:15px;font-weight:650;color:var(--ink);margin-top:2px}
+
+/* tickets */
+.tickets{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;margin:8px 0 12px}
+.ticket{position:relative;background:var(--white);border-radius:18px;padding:18px 20px 18px 24px;font-weight:700;font-size:19px;line-height:1.25;overflow:hidden}
+.ticket::before{content:"";position:absolute;left:0;top:0;bottom:0;width:8px;background:var(--c,var(--mango))}
+.ticket::after{content:"";position:absolute;right:-11px;top:50%;width:22px;height:22px;border-radius:50%;background:var(--mist);transform:translateY(-50%)}
+.ticket span{display:block;font-weight:450;font-size:15px;color:var(--ink-soft);margin-top:4px}
+
+/* timeline */
+.tl{list-style:none;margin:10px 0 12px;padding:0;position:relative}
+.tl::before{content:"";position:absolute;left:84px;top:8px;bottom:8px;width:2px;background:var(--lav)}
+.tl li{display:grid;grid-template-columns:70px 1fr;gap:30px;padding:12px 0;position:relative}
+.tl li::before{content:"";position:absolute;left:78px;top:20px;width:14px;height:14px;border-radius:50%;background:var(--mist);border:3px solid var(--ink)}
+.tl li.now::before{background:var(--pink);border-color:var(--pink)}
+.tl .yr{font-weight:750;font-size:16px;padding-top:2px;font-variant-numeric:tabular-nums}
+.tl h4{margin:0;font-size:20px;font-weight:720;line-height:1.25}
+.tl p{margin:3px 0 0;font-size:16px;color:var(--ink-soft);max-width:34em}
+
+/* skills */
+.skills{display:flex;flex-direction:column;gap:10px;margin:6px 0 12px}
+.skill{background:var(--white);border-radius:26px 26px 26px 8px;padding:18px 22px;max-width:88%}
+.skill b{display:block;font-size:19px;margin-bottom:8px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}
+.pills span{font-size:15px;padding:5px 11px;border-radius:999px;background:var(--mist)}
+.lang{display:flex;gap:10px;flex-wrap:wrap;margin-top:4px}
+.lang span{background:var(--lav);border-radius:14px;padding:10px 16px;font-weight:650}
+.lang small{display:block;font-weight:450;font-size:14px;color:var(--ink-soft)}
+
+/* composer */
+.compose{background:var(--ink);color:var(--white);border-radius:34px;padding:28px clamp(20px,4vw,36px);margin:8px 0 14px}
+.compose h3{margin:0 0 6px;font-size:clamp(28px,4.6vw,44px);line-height:1.02;font-weight:780;letter-spacing:-.025em;font-variation-settings:"opsz" 96,"wdth" 90}
+.compose p{margin:0 0 18px;color:#D9D6F1;font-size:17px}
+.starters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.starters button{font:inherit;font-size:15px;font-weight:600;background:rgba(255,255,255,.1);color:var(--white);border:1.5px solid rgba(255,255,255,.3);border-radius:999px;padding:8px 14px;cursor:pointer}
+.starters button:hover,.starters button[aria-pressed="true"]{background:var(--mango);color:var(--ink);border-color:var(--mango)}
+.compose label{display:block;font-size:15px;color:#D9D6F1;margin-bottom:6px}
+.compose input,.compose textarea{width:100%;font:inherit;font-size:18px;color:var(--ink);background:var(--white);border:0;border-radius:18px;padding:14px 18px;margin-bottom:12px}
+.compose textarea{min-height:120px;resize:vertical}
+.sendrow{display:flex;gap:10px;flex-wrap:wrap}
+.compose .btn{background:var(--mango);color:var(--ink);font-size:17px;padding:14px 22px}
+.compose .btn.alt{background:transparent;color:var(--white);box-shadow:inset 0 0 0 2px rgba(255,255,255,.6)}
+.hint{font-size:14px;color:#B9B5DD;margin:10px 0 0;min-height:1.2em}
+.direct{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0 6px}
+.direct a,.direct div{background:var(--white);border-radius:18px;padding:14px 18px;text-decoration:none;font-weight:650;font-size:17px;word-break:break-word}
+.direct small{display:block;font-weight:450;color:var(--ink-soft);font-size:14px}
+.direct a:hover{background:var(--mango)}
+
+footer{padding:30px 0 50px;text-align:center;font-size:14px;color:var(--ink-soft)}
+footer a{font-weight:650}
+
+@media (max-width:600px){
+  .direct{grid-template-columns:1fr}
+  body{font-size:17px}
+  .b,.card,.skill{max-width:96%}
+  .who span{display:none}
+  .bar .btn{padding:9px 15px;font-size:15px}
+  .card .top{padding:18px 18px 14px}
+  .mark{width:44px;height:44px;border-radius:13px;font-size:16px}
+  .card ul{padding:0 18px 4px 18px}
+  .card .foot{padding:14px 18px 18px}
+  .tl::before{left:8px}
+  .tl li{grid-template-columns:1fr;gap:2px;padding-left:34px}
+  .tl li::before{left:2px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<header class="bar">
+  <div class="wrap">
+    <div class="avatar" aria-hidden="true">H</div>
+    <div class="who"><b>Himisha Talasila</b><span>Brand & marketing strategist in Hyderabad</span></div>
+    <a class="btn" href="#talk">Message me</a>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- opener -->
+  <div class="thread" id="opener" aria-live="polite">
+    <div class="day">Today</div>
+    <div class="msg me reveal"><div class="b">hi! who's this?</div></div>
+    <div class="msg them reveal"><div class="b big">Hey, I'm Himisha.</div></div>
+    <div class="msg them reveal"><div class="b">I build brands people actually want to follow: the strategy, the reels, the creators, and the events people turn up to.</div></div>
+    <div class="msg them reveal"><div class="b">Right now I'm Creative Head at <a href="https://inflooo.com/" target="_blank" rel="noopener">Inflooo</a>, I run social media for <a href="https://www.instagram.com/southindianlogic/" target="_blank" rel="noopener">South Indian Logic</a>, and I've just started my own real estate media page, <a href="https://www.instagram.com/legit.spaces/" target="_blank" rel="noopener">Legit Spaces</a>.</div></div>
+    <div class="msg them reveal"><div class="b">Pick a question, or just keep scrolling.</div></div>
+    <nav class="chips reveal" aria-label="Questions">
+      <a class="chip" href="#grown">What have you grown?</a>
+      <a class="chip" href="#now">What are you working on?</a>
+      <a class="chip" href="#offline">Can you run events?</a>
+      <a class="chip" href="#story">How did you get here?</a>
+      <a class="chip" href="#bring">What do you bring?</a>
+      <a class="chip go" href="#talk">Let's talk</a>
+    </nav>
+  </div>
+
+  <!-- growth -->
+  <section id="grown" aria-labelledby="q-grown">
+    <div class="msg me q"><div class="b" id="q-grown">Ok, what have you actually grown?</div></div>
+    <div class="growth" id="growth">
+      <div class="nums" aria-label="From 50 thousand to 84 thousand followers">
+        <span class="from">50K</span>
+        <span class="to"><span id="count">84</span><small>K</small></span>
+      </div>
+      <p class="cap">Instagram followers for <b>South Indian Logic</b>, a Hyderabad studio behind Telugu web series like <i>Dear Kavya</i> and <i>Dil Khush</i>. I helped take the page from about 50,000 to 84,000: <b>over 34,000 new followers, roughly 68% growth</b>, through consistent planning, new creative formats and posting built around what the audience wants.</p>
+      <div class="bars" aria-hidden="true" id="bars"></div>
+      <div class="links">
+        <a class="chip" href="https://www.instagram.com/southindianlogic/" target="_blank" rel="noopener">See @southindianlogic</a>
+        <a class="chip" href="https://www.youtube.com/@southindianlogic" target="_blank" rel="noopener">Watch their series on YouTube</a>
+      </div>
+    </div>
+    <div class="msg them"><div class="b">At Inflooo I look after the digital presence of around <b>10 brand accounts</b>, each in a different industry with its own voice.</div></div>
+    <div class="msg them"><div class="b">And on my own page, <a href="https://www.instagram.com/himishachowdary/" target="_blank" rel="noopener">@himishachowdary</a>, about <b>37K people</b> follow along.</div></div>
+  </section>
+
+  <!-- now -->
+  <section id="now" aria-labelledby="q-now">
+    <div class="msg me q"><div class="b" id="q-now">What are you working on right now?</div></div>
+    <div class="msg them"><div class="b">Three things, all at once.</div></div>
+
+    <article class="card">
+      <div class="top">
+        <div class="mark" style="background:var(--mango)" aria-hidden="true">in</div>
+        <div><h3>Inflooo</h3><p class="role">Creative Head, Brand Management & Marketing <span class="when">Sep 2025 to now</span></p></div>
+      </div>
+      <ul>
+        <li>Brand positioning, content direction and communication plans for multiple businesses</li>
+        <li>Creative ideation: reels, statics, scripts, briefs, hooks and calls to action</li>
+        <li>Finding and coordinating micro and nano creators, and keeping brand and creator on the same page</li>
+        <li>Helping build original content IPs: formats and recurring content properties</li>
+      </ul>
+      <div class="foot">
+        <span class="tag" style="background:#FFF1D1">Influencer marketing company, Hyderabad</span>
+        <a class="tag" href="https://inflooo.com/" target="_blank" rel="noopener">inflooo.com</a>
+        <a class="tag" href="https://www.instagram.com/inflooo/" target="_blank" rel="noopener">@inflooo</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="top">
+        <div class="mark" style="background:var(--pink);color:var(--white)" aria-hidden="true">SIL</div>
+        <div><h3>South Indian Logic</h3><p class="role">Social Media Manager, Creative & Content Strategy <span class="when">Jan 2026 to now</span></p></div>
+      </div>
+      <ul>
+        <li>Content calendars and publishing plans for web series, short-form videos and Instagram</li>
+        <li>New post and reel formats to grow organic reach</li>
+        <li>Promoting series launches and tracking audience growth</li>
+      </ul>
+      <div class="foot">
+        <span class="tag" style="background:#FDE0E8">Telugu entertainment studio</span>
+        <a class="tag" href="https://www.instagram.com/southindianlogic/" target="_blank" rel="noopener">@southindianlogic</a>
+        <a class="tag" href="https://www.youtube.com/@southindianlogic" target="_blank" rel="noopener">YouTube</a>
+        <a class="tag" href="https://southindianlogic.com/" target="_blank" rel="noopener">southindianlogic.com</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="top">
+        <div class="mark" style="background:var(--ink);color:var(--mango)" aria-hidden="true">LS</div>
+        <div><h3>Legit Spaces</h3><p class="role">Founder, Brand Development & Content Strategy <span class="when">Oct 2026 to now</span></p></div>
+      </div>
+      <ul>
+        <li>My own real estate media brand for Hyderabad and Telangana. The promise: <b>No brokers. No bias.</b></li>
+        <li>I built the positioning, identity and visual direction</li>
+        <li>Short videos that explain HMDA, RERA, DTCP, EC, patta, mutation and property papers in plain language</li>
+      </ul>
+      <div class="foot">
+        <span class="tag" style="background:var(--lav)">Real estate media</span>
+        <a class="tag" href="https://www.instagram.com/legit.spaces/" target="_blank" rel="noopener">@legit.spaces</a>
+      </div>
+    </article>
+  </section>
+
+  <!-- offline -->
+  <section id="offline" aria-labelledby="q-off">
+    <div class="msg me q"><div class="b" id="q-off">Can you take it off the screen too?</div></div>
+    <div class="msg them"><div class="b">That's my favourite part. Some of what I've helped dream up, promote and run with creators:</div></div>
+    <div class="tickets">
+      <div class="ticket" style="--c:var(--mango)">Street runs<span>Community runs with creators</span></div>
+      <div class="ticket" style="--c:var(--pink)">Pickleball activations<span>Brand moments on court</span></div>
+      <div class="ticket" style="--c:var(--lav)">A friendship-themed race<span>Run with your people</span></div>
+      <div class="ticket" style="--c:var(--ink)">Influencer trips<span>Creators, one itinerary</span></div>
+      <div class="ticket" style="--c:#2BC27C">Free hearing-screening camps<span>At old-age homes, for a healthcare client</span></div>
+      <div class="ticket" style="--c:var(--mango)">Billboards and pamphlets<span>Offline ads that match the online story</span></div>
+    </div>
+    <div class="msg them"><div class="b">I handle the idea, the promotion, the creator coordination and the posts around it, so the event and the feed tell the same story.</div></div>
+  </section>
+
+  <!-- story -->
+  <section id="story" aria-labelledby="q-story">
+    <div class="msg me q"><div class="b" id="q-story">Wait, you studied engineering? How did you end up here?</div></div>
+    <div class="msg them"><div class="b">It's less of a jump than it looks. Theatre taught me audiences, engineering taught me structure, and Amazon taught me to check every detail.</div></div>
+    <ol class="tl">
+      <li><span class="yr">2014</span><div><h4>Cambridge IGCSE, Reqelford International School</h4><p>Seven subjects with Distinction. Inter-school basketball and art competitions.</p></div></li>
+      <li><span class="yr">2018</span><div><h4>Senior Secondary (CBSE), MPC with English and Visual Arts</h4><p>Cultural Secretary of the Student Council: school-wide cultural and sports events. Dance, basketball, debate, visual arts.</p></div></li>
+      <li><span class="yr">2020</span><div><h4>B.Tech, Electronics & Instrumentation, VNR VJIET</h4><p>Creative Head of the Dramatix acting club and its stage plays. Helped plan Scintillations, the college culture fest, and N-Army, a sustainability drive.</p></div></li>
+      <li><span class="yr">2020</span><div><h4>Freelance marketing for a healthcare organisation</h4><p>Ran Instagram, LinkedIn and YouTube, awareness campaigns, hearing-screening camps, billboards and pamphlets, alongside college.</p></div></li>
+      <li><span class="yr">2024</span><div><h4>Quality Specialist, Maps Operations, Amazon</h4><p>Address resolution, geocode fixes and map-edit checks. Where I learnt process, error analysis and working across teams.</p></div></li>
+      <li><span class="yr">2025</span><div><h4>Creative Head, Inflooo</h4><p>Back to brands, creators and campaigns, full time.</p></div></li>
+      <li><span class="yr">2026</span><div><h4>Social Media Manager, South Indian Logic</h4><p>Telugu web series and short-form entertainment. Plus my own work in front of the camera: short-form series, web series and OTT-related projects.</p></div></li>
+      <li class="now"><span class="yr">Now</span><div><h4>Founded Legit Spaces</h4><p>Real estate, explained honestly.</p></div></li>
+    </ol>
+  </section>
+
+  <!-- bring -->
+  <section id="bring" aria-labelledby="q-bring">
+    <div class="msg me q"><div class="b" id="q-bring">So what would you bring to my team?</div></div>
+    <div class="msg them"><div class="b">Someone who can think up the idea and also ship it. Here's the toolkit:</div></div>
+    <div class="skills">
+      <div class="skill"><b>Brand & marketing</b><div class="pills"><span>Brand management</span><span>Positioning</span><span>Marketing strategy</span><span>Campaign management</span><span>Audience research</span><span>Marketing communication</span></div></div>
+      <div class="skill"><b>Creative & content</b><div class="pills"><span>Creative direction</span><span>Scriptwriting</span><span>Storytelling</span><span>Copywriting</span><span>Short-form video strategy</span><span>Creative briefs</span><span>Entertainment & OTT content</span></div></div>
+      <div class="skill"><b>Social & digital</b><div class="pills"><span>Instagram</span><span>LinkedIn</span><span>YouTube</span><span>Content calendars</span><span>Organic growth</span><span>Meta Business Suite</span><span>Canva</span><span>Short-form editing</span></div></div>
+      <div class="skill"><b>Creators & events</b><div class="pills"><span>Influencer marketing</span><span>Creator management</span><span>Brand collaborations</span><span>Activations</span><span>Community engagement</span></div></div>
+      <div class="skill"><b>Leading the work</b><div class="pills"><span>Creative leadership</span><span>Team coordination</span><span>Project management</span><span>Client communication</span><span>Problem-solving</span></div></div>
+    </div>
+    <div class="msg them"><div class="b">And I can talk to your audience in their language:</div></div>
+    <div class="lang"><span>Telugu<small>Native</small></span><span>English<small>Professional</small></span><span>Hindi<small>Professional</small></span></div>
+  </section>
+
+  <!-- talk -->
+  <section id="talk" aria-labelledby="q-talk">
+    <div class="msg me q"><div class="b" id="q-talk">Ok, I'm in. How do we start?</div></div>
+    <div class="msg them"><div class="b">Tell me what you're working on. I'll take it from there.</div></div>
+    <form class="compose" id="compose" novalidate>
+      <h3>Your turn.</h3>
+      <p>Write a note and send it straight to my WhatsApp or inbox.</p>
+      <div class="starters" role="group" aria-label="Message starters">
+        <button type="button" data-t="Hi Himisha, we need someone to plan and run our brand's Instagram. Can we talk?">Run our Instagram</button>
+        <button type="button" data-t="Hi Himisha, we're planning an event and want creators involved. Are you free for a call?">Plan an event</button>
+        <button type="button" data-t="Hi Himisha, we're hiring for a brand / creative role and your profile stood out. Can we set up a chat?">We're hiring</button>
+        <button type="button" data-t="Hi Himisha, I'd love to collaborate on content with you.">Collaborate on content</button>
+      </div>
+      <label for="name">Your name</label>
+      <input id="name" name="name" autocomplete="name" placeholder="e.g. Priya from Acme">
+      <label for="note">Message</label>
+      <textarea id="note" name="note" placeholder="Hi Himisha, ..."></textarea>
+      <div class="sendrow">
+        <button class="btn" type="submit" data-via="wa">Send on WhatsApp</button>
+        <button class="btn alt" type="submit" data-via="mail">Send by email</button>
+      </div>
+      <p class="hint" id="hint" role="status"></p>
+    </form>
+    <div class="direct">
+      <a href="mailto:himishatalasila@gmail.com"><small>Email</small>himishatalasila@gmail.com</a>
+      <a href="tel:+917729925791"><small>Phone</small>+91 77299 25791</a>
+      <a href="https://www.instagram.com/himishachowdary/" target="_blank" rel="noopener"><small>Instagram</small>@himishachowdary</a>
+      <div><small>Based in</small>Hyderabad, Telangana</div>
+    </div>
+  </section>
+</main>
+
+<footer>Site by <a href="https://vamshicreates.tech" target="_blank" rel="noopener">Vamshi Creates</a></footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // opener: messages arrive one by one, with a typing indicator before each of hers
+  var items = Array.prototype.slice.call(document.querySelectorAll('#opener .reveal'));
+  if (reduce) { items.forEach(function(el){ el.classList.add('on'); }); }
+  else {
+    var t = 250;
+    items.forEach(function(el, i){
+      var hers = el.classList.contains('them');
+      if (hers) {
+        (function(delay, target){
+          setTimeout(function(){
+            var ty = document.createElement('div');
+            ty.className = 'msg them typing';
+            ty.innerHTML = '<div class="b" aria-label="typing"><i></i><i></i><i></i></div>';
+            target.parentNode.insertBefore(ty, target);
+            setTimeout(function(){ ty.remove(); target.classList.add('on'); }, 520);
+          }, delay);
+        })(t, el);
+        t += 520 + 260;
+      } else {
+        (function(delay, target){ setTimeout(function(){ target.classList.add('on'); }, delay); })(t, el);
+        t += 450;
+      }
+    });
+  }
+
+  // growth bars + counter, once, when the card comes into view
+  var bars = document.getElementById('bars');
+  var steps = 18;
+  for (var i = 0; i < steps; i++) {
+    var s = document.createElement('span');
+    var v = 50 + (34 * Math.pow(i / (steps - 1), 1.15));
+    s.style.height = ((v - 40) / 44 * 100) + '%';
+    bars.appendChild(s);
+  }
+  var count = document.getElementById('count');
+  function run(){
+    if (reduce) return;
+    var spans = bars.children, start = null, dur = 1400;
+    Array.prototype.forEach.call(spans, function(sp, k){
+      sp.style.transform = 'scaleY(0)';
+      sp.style.transition = 'transform .5s ease ' + (k * 45) + 'ms';
+      requestAnimationFrame(function(){ requestAnimationFrame(function(){ sp.style.transform = 'scaleY(1)'; }); });
+    });
+    function tick(ts){
+      if (!start) start = ts;
+      var p = Math.min(1, (ts - start) / dur);
+      var e = 1 - Math.pow(1 - p, 3);
+      count.textContent = Math.round(50 + 34 * e);
+      if (p < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+  if ('IntersectionObserver' in window && !reduce) {
+    count.textContent = '50';
+    var io = new IntersectionObserver(function(es){
+      if (es[0].isIntersecting) { run(); io.disconnect(); }
+    }, { threshold: .45 });
+    io.observe(document.getElementById('growth'));
+  }
+
+  // composer
+  var note = document.getElementById('note'), nameEl = document.getElementById('name'), hint = document.getElementById('hint');
+  var starters = document.querySelectorAll('.starters button');
+  Array.prototype.forEach.call(starters, function(b){
+    b.addEventListener('click', function(){
+      Array.prototype.forEach.call(starters, function(x){ x.setAttribute('aria-pressed','false'); });
+      b.setAttribute('aria-pressed','true');
+      note.value = b.getAttribute('data-t');
+      note.focus();
+    });
+  });
+  var via = 'wa';
+  Array.prototype.forEach.call(document.querySelectorAll('.sendrow button'), function(b){
+    b.addEventListener('click', function(){ via = b.getAttribute('data-via'); });
+  });
+  document.getElementById('compose').addEventListener('submit', function(e){
+    e.preventDefault();
+    var msg = note.value.trim();
+    if (!msg) { hint.textContent = 'Write a message first, or tap one of the starters above.'; note.focus(); return; }
+    var who = nameEl.value.trim();
+    var full = msg + (who ? '\n\n- ' + who : '');
+    if (via === 'mail') {
+      location.href = 'mailto:himishatalasila@gmail.com?subject=' + encodeURIComponent('Hi Himisha' + (who ? ', from ' + who : '')) + '&body=' + encodeURIComponent(full);
+      hint.textContent = 'Opening your email app.';
+    } else {
+      window.open('https://wa.me/917729925791?text=' + encodeURIComponent(full), '_blank', 'noopener');
+      hint.textContent = 'Opening WhatsApp with your message.';
+    }
+  });
+})();
+</script>
+</body>
+</html>
