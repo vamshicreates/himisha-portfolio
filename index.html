@@ -94,7 +94,7 @@ section{padding:56px 0 24px}
 /* link preview attachment */
 .card{display:block;text-decoration:none;background:var(--white);border-radius:26px 26px 26px 8px;overflow:hidden;max-width:100%;margin:0 0 12px}
 .card .top{padding:22px 22px 18px;display:flex;gap:16px;align-items:flex-start}
-.mark{width:54px;height:54px;border-radius:16px;flex:none;display:grid;place-items:center;font-weight:800;font-size:19px;letter-spacing:-.02em}
+.mark{width:54px;height:54px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 3px var(--white),0 0 0 5px var(--mango);flex:none;display:grid;place-items:center;font-weight:800;font-size:19px;letter-spacing:-.02em}
 .card h3{margin:0;font-size:clamp(23px,3vw,30px);line-height:1.1;font-weight:760;letter-spacing:-.015em;font-variation-settings:"opsz" 48}
 .card .role{margin:5px 0 0;font-size:16px;color:var(--ink-soft)}
 .card ul{margin:0;padding:0 22px 4px 92px;list-style:none;font-size:17px}
@@ -122,13 +122,19 @@ a.tag:hover{background:var(--mango)}
 .tl p{margin:3px 0 0;font-size:16px;color:var(--ink-soft);max-width:34em}
 
 /* skills */
-.skills{display:flex;flex-direction:column;gap:10px;margin:6px 0 12px}
-.skill{background:var(--white);border-radius:26px 26px 26px 8px;padding:18px 22px;max-width:88%}
-.skill b{display:block;font-size:19px;margin-bottom:8px}
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:6px 0 12px}
+.skill{background:var(--c,#fff);color:var(--t,var(--ink));border-radius:26px;padding:20px 22px}
+.skill:last-child:nth-child(odd){grid-column:1/-1}
+.skill.s1{--c:var(--ink);--t:#fff;--p:rgba(255,255,255,.14)}
+.skill.s2{--c:var(--mango);--p:rgba(255,255,255,.55)}
+.skill.s3{--c:var(--pink);--t:#fff;--p:rgba(255,255,255,.2)}
+.skill.s4{--c:var(--lav);--p:rgba(255,255,255,.6)}
+.skill.s5{--c:#2BC27C;--t:#0F2D22;--p:rgba(255,255,255,.45)}
+.skill b{display:block;font-size:22px;font-weight:780;letter-spacing:-.015em;margin-bottom:12px}
 .pills{display:flex;flex-wrap:wrap;gap:6px}
-.pills span{font-size:15px;padding:5px 11px;border-radius:999px;background:var(--mist)}
+.pills span{font-size:15px;font-weight:550;padding:6px 12px;border-radius:999px;background:var(--p,var(--mist))}
 .lang{display:flex;gap:10px;flex-wrap:wrap;margin-top:4px}
-.lang span{background:var(--lav);border-radius:14px;padding:10px 16px;font-weight:650}
+.lang span{background:var(--white);box-shadow:inset 0 0 0 2px var(--ink);border-radius:14px;padding:10px 16px;font-weight:650}
 .lang small{display:block;font-weight:450;font-size:14px;color:var(--ink-soft)}
 
 /* composer */
@@ -145,7 +151,7 @@ a.tag:hover{background:var(--mango)}
 .compose .btn{background:var(--mango);color:var(--ink);font-size:17px;padding:14px 22px}
 .compose .btn.alt{background:transparent;color:var(--white);box-shadow:inset 0 0 0 2px rgba(255,255,255,.6)}
 .hint{font-size:14px;color:#B9B5DD;margin:10px 0 0;min-height:1.2em}
-.direct{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0 6px}
+.direct{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0 6px}
 .direct a,.direct div{background:var(--white);border-radius:18px;padding:14px 18px;text-decoration:none;font-weight:650;font-size:17px;word-break:break-word}
 .direct small{display:block;font-weight:450;color:var(--ink-soft);font-size:14px}
 .direct a:hover{background:var(--mango)}
@@ -158,6 +164,7 @@ footer a{font-weight:650}
 .wide{max-width:1140px;margin:0 auto;padding:0 20px}
 .hero{display:grid;grid-template-columns:minmax(260px,400px) 1fr;gap:clamp(24px,5vw,64px);align-items:start;padding:40px 0 10px}
 .portrait{position:sticky;top:92px;margin:0}
+.portrait .photo{position:relative}
 .portrait .frame{position:relative;border-radius:200px 200px 28px 28px;overflow:hidden;background:var(--mango);aspect-ratio:337/422;box-shadow:0 0 0 10px var(--white),0 0 0 12px var(--lav)}
 .portrait img{width:100%;height:100%;object-fit:cover;display:block}
 .portrait .sticker{position:absolute;left:-14px;bottom:56px;background:var(--pink);color:var(--white);font-weight:750;font-size:17px;padding:10px 16px;border-radius:999px;transform:rotate(-6deg)}
@@ -253,9 +260,9 @@ footer a{font-weight:650}
 <div class="wide">
   <div class="hero">
     <figure class="portrait">
-      <div class="frame"><img src="assets/himisha.jpg" alt="Portrait of Himisha Talasila Chowdary" width="337" height="422"></div>
+      <div class="photo"><div class="frame"><img src="assets/himisha.jpg" alt="Portrait of Himisha Talasila Chowdary" width="337" height="422"></div>
       <span class="sticker" aria-hidden="true">50K → 84K</span>
-      <span class="sticker2" aria-hidden="true">Hyderabad</span>
+      <span class="sticker2" aria-hidden="true">Hyderabad</span></div>
       <figcaption>
         <span class="fullname">Himisha Talasila Chowdary</span>
         <span class="roles" role="list" aria-label="Roles">
@@ -286,15 +293,15 @@ footer a{font-weight:650}
 
 <div class="ringsband">
   <div class="wide">
-    <h2>The pages I work on and with</h2>
+    <h2>The brands I work with</h2>
     <nav class="rings" aria-label="Instagram pages">
       <a class="ring" href="https://www.instagram.com/himishachowdary/" target="_blank" rel="noopener"><span class="o"><span class="i"><img src="assets/himisha.jpg" alt=""></span></span><b>@himishachowdary</b><small>37K, my page</small></a>
-      <a class="ring" href="https://www.instagram.com/southindianlogic/" target="_blank" rel="noopener"><span class="o"><span class="i" style="background:var(--pink);color:#fff">SIL</span></span><b>@southindianlogic</b><small>84K</small></a>
-      <a class="ring" href="https://www.instagram.com/inflooo/" target="_blank" rel="noopener"><span class="o"><span class="i" style="background:var(--mango)">in</span></span><b>@inflooo</b><small>8.6K</small></a>
-      <a class="ring" href="https://www.instagram.com/legit.spaces/" target="_blank" rel="noopener"><span class="o"><span class="i" style="background:var(--ink);color:var(--mango)">LS</span></span><b>@legit.spaces</b><small>7.4K, founder</small></a>
-      <a class="ring" href="https://www.instagram.com/sainmacreations/" target="_blank" rel="noopener"><span class="o"><span class="i" style="background:#FFD9A0">Sa</span></span><b>@sainmacreations</b><small>53K, SIL wing</small></a>
-      <a class="ring" href="https://www.instagram.com/realrowdybaby/" target="_blank" rel="noopener"><span class="o"><span class="i" style="background:var(--lav)">RB</span></span><b>@realrowdybaby</b><small>7.4K, SIL wing</small></a>
-      <a class="ring" href="https://www.instagram.com/silplaytelugu/" target="_blank" rel="noopener"><span class="o"><span class="i" style="background:#FDE0E8">SP</span></span><b>@silplaytelugu</b><small>4.6K, SIL wing</small></a>
+      <a class="ring" href="https://www.instagram.com/southindianlogic/" target="_blank" rel="noopener"><span class="o"><span class="i"><img src="assets/ig-sil.jpg" alt="" width="80" height="80" loading="lazy"></span></span><b>@southindianlogic</b><small>84K</small></a>
+      <a class="ring" href="https://www.instagram.com/inflooo/" target="_blank" rel="noopener"><span class="o"><span class="i"><img src="assets/ig-inflooo.webp" alt="" width="80" height="80" loading="lazy"></span></span><b>@inflooo</b><small>8.6K</small></a>
+      <a class="ring" href="https://www.instagram.com/legit.spaces/" target="_blank" rel="noopener"><span class="o"><span class="i"><img src="assets/ig-legit.webp" alt="" width="80" height="80" loading="lazy"></span></span><b>@legit.spaces</b><small>7.4K, founder</small></a>
+      <a class="ring" href="https://www.instagram.com/sainmacreations/" target="_blank" rel="noopener"><span class="o"><span class="i"><img src="assets/ig-sainma.webp" alt="" width="80" height="80" loading="lazy"></span></span><b>@sainmacreations</b><small>53K, SIL wing</small></a>
+      <a class="ring" href="https://www.instagram.com/realrowdybaby/" target="_blank" rel="noopener"><span class="o"><span class="i"><img src="assets/ig-rowdy.webp" alt="" width="80" height="80" loading="lazy"></span></span><b>@realrowdybaby</b><small>7.4K, SIL wing</small></a>
+      <a class="ring" href="https://www.instagram.com/silplaytelugu/" target="_blank" rel="noopener"><span class="o"><span class="i"><img src="assets/ig-silplay.webp" alt="" width="80" height="80" loading="lazy"></span></span><b>@silplaytelugu</b><small>4.6K, SIL wing</small></a>
       <a class="ring" href="https://www.youtube.com/@southindianlogic" target="_blank" rel="noopener"><span class="o"><span class="i" style="background:#fff;color:var(--pink)">▶</span></span><b>SIL on YouTube</b><small>Web series</small></a>
     </nav>
   </div>
@@ -338,7 +345,7 @@ footer a{font-weight:650}
 
     <article class="card">
       <div class="top">
-        <div class="mark" style="background:var(--mango)" aria-hidden="true">in</div>
+        <img class="mark" src="assets/ig-inflooo.webp" alt="" aria-hidden="true">
         <div><h3>Inflooo</h3><p class="role">Creative Head, Brand Management & Marketing <span class="when">Sep 2025 to now</span></p></div>
       </div>
       <ul>
@@ -357,7 +364,7 @@ footer a{font-weight:650}
 
     <article class="card">
       <div class="top">
-        <div class="mark" style="background:var(--pink);color:var(--white)" aria-hidden="true">SIL</div>
+        <img class="mark" src="assets/ig-sil.jpg" alt="" aria-hidden="true">
         <div><h3>South Indian Logic</h3><p class="role">Social Media Manager, Creative & Content Strategy <span class="when">Jan 2026 to now</span></p></div>
       </div>
       <ul>
@@ -376,7 +383,7 @@ footer a{font-weight:650}
 
     <article class="card">
       <div class="top">
-        <div class="mark" style="background:var(--ink);color:var(--mango)" aria-hidden="true">LS</div>
+        <img class="mark" src="assets/ig-legit.webp" alt="" aria-hidden="true">
         <div><h3>Legit Spaces</h3><p class="role">Founder, Brand Development & Content Strategy <span class="when">Oct 2026 to now</span></p></div>
       </div>
       <ul>
@@ -428,11 +435,11 @@ footer a{font-weight:650}
     <div class="msg me q"><div class="b" id="q-bring">So what would you bring to my team?</div></div>
     <div class="msg them"><div class="b">Someone who can think up the idea and also ship it. Here's the toolkit:</div></div>
     <div class="skills">
-      <div class="skill"><b>Brand & marketing</b><div class="pills"><span>Brand management</span><span>Positioning</span><span>Marketing strategy</span><span>Campaign management</span><span>Audience research</span><span>Marketing communication</span></div></div>
-      <div class="skill"><b>Creative & content</b><div class="pills"><span>Creative direction</span><span>Scriptwriting</span><span>Storytelling</span><span>Copywriting</span><span>Short-form video strategy</span><span>Creative briefs</span><span>Entertainment & OTT content</span></div></div>
-      <div class="skill"><b>Social & digital</b><div class="pills"><span>Instagram</span><span>LinkedIn</span><span>YouTube</span><span>Content calendars</span><span>Organic growth</span><span>Meta Business Suite</span><span>Canva</span><span>Short-form editing</span></div></div>
-      <div class="skill"><b>Creators & events</b><div class="pills"><span>Influencer marketing</span><span>Creator management</span><span>Brand collaborations</span><span>Activations</span><span>Community engagement</span></div></div>
-      <div class="skill"><b>Leading the work</b><div class="pills"><span>Creative leadership</span><span>Team coordination</span><span>Project management</span><span>Client communication</span><span>Problem-solving</span></div></div>
+      <div class="skill s1"><b>Brand & marketing</b><div class="pills"><span>Brand management</span><span>Positioning</span><span>Marketing strategy</span><span>Campaign management</span><span>Audience research</span><span>Marketing communication</span></div></div>
+      <div class="skill s2"><b>Creative & content</b><div class="pills"><span>Creative direction</span><span>Scriptwriting</span><span>Storytelling</span><span>Copywriting</span><span>Short-form video strategy</span><span>Creative briefs</span><span>Entertainment & OTT content</span></div></div>
+      <div class="skill s3"><b>Social & digital</b><div class="pills"><span>Instagram</span><span>LinkedIn</span><span>YouTube</span><span>Content calendars</span><span>Organic growth</span><span>Meta Business Suite</span><span>Canva</span><span>Short-form editing</span></div></div>
+      <div class="skill s4"><b>Creators & events</b><div class="pills"><span>Influencer marketing</span><span>Creator management</span><span>Brand collaborations</span><span>Activations</span><span>Community engagement</span></div></div>
+      <div class="skill s5"><b>Leading the work</b><div class="pills"><span>Creative leadership</span><span>Team coordination</span><span>Project management</span><span>Client communication</span><span>Problem-solving</span></div></div>
     </div>
     <div class="msg them"><div class="b">And I can talk to your audience in their language:</div></div>
     <div class="lang"><span>Telugu<small>Native</small></span><span>English<small>Professional</small></span><span>Hindi<small>Professional</small></span></div>
@@ -444,26 +451,24 @@ footer a{font-weight:650}
     <div class="msg them"><div class="b">Tell me what you're working on. I'll take it from there.</div></div>
     <form class="compose" id="compose" novalidate>
       <h3>Your turn.</h3>
-      <p>Write a note and send it straight to my WhatsApp or inbox.</p>
+      <p>Your message lands straight in my WhatsApp. Edit it or send it as it is.</p>
       <div class="starters" role="group" aria-label="Message starters">
+        <button type="button" aria-pressed="true" data-t="Hi Himisha, we came across your portfolio and we'd love to talk to you about a creative role at our company. Are you open to a quick chat this week?">We're hiring</button>
         <button type="button" data-t="Hi Himisha, we need someone to plan and run our brand's Instagram. Can we talk?">Run our Instagram</button>
         <button type="button" data-t="Hi Himisha, we're planning an event and want creators involved. Are you free for a call?">Plan an event</button>
-        <button type="button" data-t="Hi Himisha, we're hiring for a brand / creative role and your profile stood out. Can we set up a chat?">We're hiring</button>
         <button type="button" data-t="Hi Himisha, I'd love to collaborate on content with you.">Collaborate on content</button>
       </div>
       <label for="name">Your name</label>
       <input id="name" name="name" autocomplete="name" placeholder="e.g. Priya from Acme">
       <label for="note">Message</label>
-      <textarea id="note" name="note" placeholder="Hi Himisha, ..."></textarea>
+      <textarea id="note" name="note" placeholder="Hi Himisha, ...">Hi Himisha, we came across your portfolio and we'd love to talk to you about a creative role at our company. Are you open to a quick chat this week?</textarea>
       <div class="sendrow">
-        <button class="btn" type="submit" data-via="wa">Send on WhatsApp</button>
-        <button class="btn alt" type="submit" data-via="mail">Send by email</button>
+        <button class="btn" type="submit">Send on WhatsApp</button>
       </div>
       <p class="hint" id="hint" role="status"></p>
     </form>
     <div class="direct">
-      <a href="mailto:himishatalasila@gmail.com"><small>Email</small>himishatalasila@gmail.com</a>
-      <a href="tel:+917729925791"><small>Phone</small>+91 77299 25791</a>
+      <a href="https://wa.me/917729925791?text=Hi%20Himisha%2C%20we%20came%20across%20your%20portfolio%20and%20we%27d%20love%20to%20talk%20to%20you%20about%20a%20creative%20role%20at%20our%20company.%20Are%20you%20open%20to%20a%20quick%20chat%20this%20week%3F" target="_blank" rel="noopener"><small>WhatsApp</small>+91 77299 25791</a>
       <a href="https://www.instagram.com/himishachowdary/" target="_blank" rel="noopener"><small>Instagram</small>@himishachowdary</a>
       <div><small>Based in</small>Hyderabad, Telangana</div>
     </div>
@@ -567,23 +572,14 @@ footer a{font-weight:650}
       note.focus();
     });
   });
-  var via = 'wa';
-  Array.prototype.forEach.call(document.querySelectorAll('.sendrow button'), function(b){
-    b.addEventListener('click', function(){ via = b.getAttribute('data-via'); });
-  });
   document.getElementById('compose').addEventListener('submit', function(e){
     e.preventDefault();
     var msg = note.value.trim();
     if (!msg) { hint.textContent = 'Write a message first, or tap one of the starters above.'; note.focus(); return; }
     var who = nameEl.value.trim();
     var full = msg + (who ? '\n\n- ' + who : '');
-    if (via === 'mail') {
-      location.href = 'mailto:himishatalasila@gmail.com?subject=' + encodeURIComponent('Hi Himisha' + (who ? ', from ' + who : '')) + '&body=' + encodeURIComponent(full);
-      hint.textContent = 'Opening your email app.';
-    } else {
-      window.open('https://wa.me/917729925791?text=' + encodeURIComponent(full), '_blank', 'noopener');
-      hint.textContent = 'Opening WhatsApp with your message.';
-    }
+    window.open('https://wa.me/917729925791?text=' + encodeURIComponent(full), '_blank', 'noopener');
+    hint.textContent = 'Opening WhatsApp with your message.';
   });
 })();
 </script>
