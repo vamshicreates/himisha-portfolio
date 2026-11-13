@@ -92,7 +92,7 @@ section{padding:56px 0 24px}
 .growth .chip:hover{color:var(--ink)}
 
 /* link preview attachment */
-.card{display:block;text-decoration:none;background:var(--white);border-radius:26px 26px 26px 8px;overflow:hidden;max-width:88%;margin:0 0 10px}
+.card{display:block;text-decoration:none;background:var(--white);border-radius:26px 26px 26px 8px;overflow:hidden;max-width:100%;margin:0 0 12px}
 .card .top{padding:22px 22px 18px;display:flex;gap:16px;align-items:flex-start}
 .mark{width:54px;height:54px;border-radius:16px;flex:none;display:grid;place-items:center;font-weight:800;font-size:19px;letter-spacing:-.02em}
 .card h3{margin:0;font-size:clamp(23px,3vw,30px);line-height:1.1;font-weight:760;letter-spacing:-.015em;font-variation-settings:"opsz" 48}
@@ -153,6 +153,64 @@ a.tag:hover{background:var(--mango)}
 footer{padding:30px 0 50px;text-align:center;font-size:14px;color:var(--ink-soft)}
 footer a{font-weight:650}
 
+
+/* ---------- imagery ---------- */
+.wide{max-width:1140px;margin:0 auto;padding:0 20px}
+.hero{display:grid;grid-template-columns:minmax(260px,400px) 1fr;gap:clamp(24px,5vw,64px);align-items:start;padding:40px 0 10px}
+.portrait{position:sticky;top:92px;margin:0}
+.portrait .frame{position:relative;border-radius:200px 200px 28px 28px;overflow:hidden;background:var(--mango);aspect-ratio:337/422;box-shadow:0 0 0 10px var(--white),0 0 0 12px var(--lav)}
+.portrait img{width:100%;height:100%;object-fit:cover;display:block}
+.portrait .sticker{position:absolute;left:-14px;bottom:56px;background:var(--pink);color:var(--white);font-weight:750;font-size:17px;padding:10px 16px;border-radius:999px;transform:rotate(-6deg)}
+.portrait .sticker2{position:absolute;right:-12px;top:42%;background:var(--white);font-weight:700;font-size:15px;padding:8px 14px;border-radius:999px;transform:rotate(5deg);box-shadow:0 0 0 2px var(--ink)}
+.portrait figcaption{margin-top:22px;font-size:15px;color:var(--ink-soft)}
+.hero .thread{padding:0}
+
+/* story rings */
+.rings{display:flex;gap:18px;overflow-x:auto;padding:28px 2px 18px;scrollbar-width:none}
+.rings::-webkit-scrollbar{display:none}
+.ring{flex:none;width:96px;text-align:center;text-decoration:none}
+.ring .o{display:block;width:88px;height:88px;margin:0 auto 8px;border-radius:50%;padding:4px;background:conic-gradient(from 200deg,var(--mango),var(--pink),var(--lav),var(--mango))}
+.ring .i{display:grid;place-items:center;width:100%;height:100%;border-radius:50%;border:4px solid var(--mist);font-weight:800;font-size:22px;letter-spacing:-.03em;overflow:hidden}
+.ring .i img{width:100%;height:100%;object-fit:cover}
+.ring b{display:block;font-size:14px;font-weight:650;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ring small{display:block;font-size:13px;color:var(--ink-soft)}
+.ring:hover .o{transform:rotate(12deg);transition:transform .3s}
+.ringsband{background:var(--white);border-top:1px solid #E1E3EF;border-bottom:1px solid #E1E3EF;margin-top:30px}
+.ringsband .wide{display:flex;align-items:center;gap:24px}
+.ringsband h2{flex:none;margin:0;font-size:18px;font-weight:750;line-height:1.2;max-width:9em}
+
+/* instagram feed strips */
+.feed{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 2px 14px;margin:0 0 12px;scrollbar-width:thin}
+.post{flex:0 0 330px;height:520px;border-radius:22px;overflow:hidden;background:var(--white);scroll-snap-align:start;position:relative;box-shadow:0 0 0 1px #E1E3EF}
+.post iframe{width:100%;height:760px;border:0;display:block}
+.post .ph{position:absolute;inset:0;display:grid;place-items:center;color:var(--ink-soft);font-size:15px;background:linear-gradient(135deg,#fff,#F1EFFC)}
+.feedhead{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:18px 0 8px}
+.feedhead h3{margin:0;font-size:20px;font-weight:720}
+.feedhead a{font-size:15px;font-weight:650}
+.card .feed{padding:0 22px 16px 92px;margin:0}
+
+/* poster wall */
+.posters{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:14px 0 6px}
+.poster{position:relative;display:block;border-radius:18px;overflow:hidden;aspect-ratio:16/9;background:var(--ink);text-decoration:none}
+.poster img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.poster:hover img{transform:scale(1.05)}
+.poster span{position:absolute;left:0;right:0;bottom:0;padding:22px 12px 9px;font-size:14px;font-weight:700;color:var(--white);background:linear-gradient(transparent,rgba(30,26,61,.92))}
+.poster::after{content:"";position:absolute;top:10px;right:10px;width:30px;height:30px;border-radius:50%;background:var(--mango) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 7l8 5-8 5z' fill='%231E1A3D'/%3E%3C/svg%3E") center/18px no-repeat}
+.growth .posters{margin-top:24px}
+
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr}
+  .portrait{position:relative;top:0;max-width:300px;margin:0 auto}
+  .posters{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:600px){
+  .card .feed{padding:0 18px 16px}
+  .post{flex-basis:300px;height:480px}
+  .ringsband .wide{display:block}
+  .ringsband h2{padding-top:20px}
+  .rings{padding-top:14px}
+}
+
 @media (max-width:600px){
   .direct{grid-template-columns:1fr}
   body{font-size:17px}
@@ -178,16 +236,21 @@ footer a{font-weight:650}
 <script>document.documentElement.classList.add('js')</script>
 
 <header class="bar">
-  <div class="wrap">
-    <div class="avatar" aria-hidden="true">H</div>
+  <div class="wide" style="display:flex;align-items:center;gap:14px;height:68px">
+    <div class="avatar" aria-hidden="true" style="background:url(assets/himisha.jpg) center 20%/cover"></div>
     <div class="who"><b>Himisha Talasila</b><span>Brand & marketing strategist in Hyderabad</span></div>
     <a class="btn" href="#talk">Message me</a>
   </div>
 </header>
 
-<main class="wrap">
-
-  <!-- opener -->
+<div class="wide">
+  <div class="hero">
+    <figure class="portrait">
+      <div class="frame"><img src="assets/himisha.jpg" alt="Portrait of Himisha Talasila Chowdary" width="337" height="422"></div>
+      <span class="sticker" aria-hidden="true">50K → 84K</span>
+      <span class="sticker2" aria-hidden="true">Hyderabad</span>
+      <figcaption>Himisha Talasila Chowdary. Brand & marketing strategist, creative head, content creator.</figcaption>
+    </figure>
   <div class="thread" id="opener" aria-live="polite">
     <div class="day">Today</div>
     <div class="msg me reveal"><div class="b">hi! who's this?</div></div>
@@ -204,6 +267,26 @@ footer a{font-weight:650}
       <a class="chip go" href="#talk">Let's talk</a>
     </nav>
   </div>
+  </div>
+</div>
+
+<div class="ringsband">
+  <div class="wide">
+    <h2>The pages I work on and with</h2>
+    <nav class="rings" aria-label="Instagram pages">
+      <a class="ring" href="https://www.instagram.com/himishachowdary/" target="_blank" rel="noopener"><span class="o"><span class="i"><img src="assets/himisha.jpg" alt=""></span></span><b>@himishachowdary</b><small>37K, my page</small></a>
+      <a class="ring" href="https://www.instagram.com/southindianlogic/" target="_blank" rel="noopener"><span class="o"><span class="i" style="background:var(--pink);color:#fff">SIL</span></span><b>@southindianlogic</b><small>84K</small></a>
+      <a class="ring" href="https://www.instagram.com/inflooo/" target="_blank" rel="noopener"><span class="o"><span class="i" style="background:var(--mango)">in</span></span><b>@inflooo</b><small>8.6K</small></a>
+      <a class="ring" href="https://www.instagram.com/legit.spaces/" target="_blank" rel="noopener"><span class="o"><span class="i" style="background:var(--ink);color:var(--mango)">LS</span></span><b>@legit.spaces</b><small>7.4K, founder</small></a>
+      <a class="ring" href="https://www.instagram.com/sainmacreations/" target="_blank" rel="noopener"><span class="o"><span class="i" style="background:#FFD9A0">Sa</span></span><b>@sainmacreations</b><small>53K, SIL wing</small></a>
+      <a class="ring" href="https://www.instagram.com/realrowdybaby/" target="_blank" rel="noopener"><span class="o"><span class="i" style="background:var(--lav)">RB</span></span><b>@realrowdybaby</b><small>7.4K, SIL wing</small></a>
+      <a class="ring" href="https://www.instagram.com/silplaytelugu/" target="_blank" rel="noopener"><span class="o"><span class="i" style="background:#FDE0E8">SP</span></span><b>@silplaytelugu</b><small>4.6K, SIL wing</small></a>
+      <a class="ring" href="https://www.youtube.com/@southindianlogic" target="_blank" rel="noopener"><span class="o"><span class="i" style="background:#fff;color:var(--pink)">▶</span></span><b>SIL on YouTube</b><small>Web series</small></a>
+    </nav>
+  </div>
+</div>
+
+<main class="wrap">
 
   <!-- growth -->
   <section id="grown" aria-labelledby="q-grown">
@@ -215,6 +298,14 @@ footer a{font-weight:650}
       </div>
       <p class="cap">Instagram followers for <b>South Indian Logic</b>, a Hyderabad studio behind Telugu web series like <i>Dear Kavya</i> and <i>Dil Khush</i>. I helped take the page from about 50,000 to 84,000: <b>over 34,000 new followers, roughly 68% growth</b>, through consistent planning, new creative formats and posting built around what the audience wants.</p>
       <div class="bars" aria-hidden="true" id="bars"></div>
+      <div class="posters">
+        <a class="poster" href="https://www.youtube.com/watch?v=Vrcjv--S2YA" target="_blank" rel="noopener"><img loading="lazy" src="https://i.ytimg.com/vi/Vrcjv--S2YA/hqdefault.jpg" alt=""><span>Dear Kavya, Season 1</span></a>
+        <a class="poster" href="https://www.youtube.com/watch?v=SkzJStHeeLg" target="_blank" rel="noopener"><img loading="lazy" src="https://i.ytimg.com/vi/SkzJStHeeLg/hqdefault.jpg" alt=""><span>Dear Kavya, Season 2</span></a>
+        <a class="poster" href="https://www.youtube.com/watch?v=EG7QcVFNMrA" target="_blank" rel="noopener"><img loading="lazy" src="https://i.ytimg.com/vi/EG7QcVFNMrA/hqdefault.jpg" alt=""><span>Dil Khush</span></a>
+        <a class="poster" href="https://www.youtube.com/watch?v=-tToPls7fYk" target="_blank" rel="noopener"><img loading="lazy" src="https://i.ytimg.com/vi/-tToPls7fYk/hqdefault.jpg" alt=""><span>Vennela</span></a>
+        <a class="poster" href="https://www.youtube.com/watch?v=PsVxLQv8_e4" target="_blank" rel="noopener"><img loading="lazy" src="https://i.ytimg.com/vi/PsVxLQv8_e4/hqdefault.jpg" alt=""><span>Telugu Medium</span></a>
+        <a class="poster" href="https://www.youtube.com/watch?v=nZlUBPP--ps" target="_blank" rel="noopener"><img loading="lazy" src="https://i.ytimg.com/vi/nZlUBPP--ps/hqdefault.jpg" alt=""><span>Arranged Marriage</span></a>
+      </div>
       <div class="links">
         <a class="chip" href="https://www.instagram.com/southindianlogic/" target="_blank" rel="noopener">See @southindianlogic</a>
         <a class="chip" href="https://www.youtube.com/@southindianlogic" target="_blank" rel="noopener">Watch their series on YouTube</a>
@@ -222,6 +313,8 @@ footer a{font-weight:650}
     </div>
     <div class="msg them"><div class="b">At Inflooo I look after the digital presence of around <b>10 brand accounts</b>, each in a different industry with its own voice.</div></div>
     <div class="msg them"><div class="b">And on my own page, <a href="https://www.instagram.com/himishachowdary/" target="_blank" rel="noopener">@himishachowdary</a>, about <b>37K people</b> follow along.</div></div>
+    <div class="feedhead"><h3>From my feed</h3><a href="https://www.instagram.com/himishachowdary/" target="_blank" rel="noopener">Open @himishachowdary</a></div>
+    <div class="feed" data-posts="DfUXz24iUwc,DYZKXodxFXr,DOQoH_hE86I,DOd1ZpKgRq5,DewpLlBCchB,DegjgoLETJH,DeUPdn2Cb3d" aria-label="Posts from @himishachowdary"></div>
   </section>
 
   <!-- now -->
@@ -240,6 +333,7 @@ footer a{font-weight:650}
         <li>Finding and coordinating micro and nano creators, and keeping brand and creator on the same page</li>
         <li>Helping build original content IPs: formats and recurring content properties</li>
       </ul>
+      <div class="feed" data-posts="DOIhqj2EUe8,DfhZfmRMsNQ,DfZrwECsPDY,DfXEl7Psaw5" aria-label="Posts from @inflooo"></div>
       <div class="foot">
         <span class="tag" style="background:#FFF1D1">Influencer marketing company, Hyderabad</span>
         <a class="tag" href="https://inflooo.com/" target="_blank" rel="noopener">inflooo.com</a>
@@ -257,6 +351,7 @@ footer a{font-weight:650}
         <li>New post and reel formats to grow organic reach</li>
         <li>Promoting series launches and tracking audience growth</li>
       </ul>
+      <div class="feed" data-posts="DetLyGUSX_E,DYTnX_3scre,DQLZUHVkmWj,DfpTKZJSCjS" aria-label="Posts from @southindianlogic"></div>
       <div class="foot">
         <span class="tag" style="background:#FDE0E8">Telugu entertainment studio</span>
         <a class="tag" href="https://www.instagram.com/southindianlogic/" target="_blank" rel="noopener">@southindianlogic</a>
@@ -275,6 +370,7 @@ footer a{font-weight:650}
         <li>I built the positioning, identity and visual direction</li>
         <li>Short videos that explain HMDA, RERA, DTCP, EC, patta, mutation and property papers in plain language</li>
       </ul>
+      <div class="feed" data-posts="DfpD6zlT8ju,DfmrutqCQVJ,DfkCIKJznPj,DfXGbByTSKc" aria-label="Posts from @legit.spaces"></div>
       <div class="foot">
         <span class="tag" style="background:var(--lav)">Real estate media</span>
         <a class="tag" href="https://www.instagram.com/legit.spaces/" target="_blank" rel="noopener">@legit.spaces</a>
@@ -425,6 +521,26 @@ footer a{font-weight:650}
     }, { threshold: .45 });
     io.observe(document.getElementById('growth'));
   }
+
+
+  // instagram embeds, loaded only when a strip nears the viewport
+  var feeds = document.querySelectorAll('.feed[data-posts]');
+  function fill(f){
+    if (f.dataset.done) return; f.dataset.done = 1;
+    f.dataset.posts.split(',').forEach(function(code){
+      var d = document.createElement('div'); d.className = 'post';
+      d.innerHTML = '<div class="ph">Loading post</div>';
+      var ifr = document.createElement('iframe');
+      ifr.src = 'https://www.instagram.com/p/' + code + '/embed/';
+      ifr.title = 'Instagram post'; ifr.loading = 'lazy'; ifr.setAttribute('scrolling','no'); ifr.setAttribute('allowtransparency','true');
+      ifr.addEventListener('load', function(){ var ph = d.querySelector('.ph'); if (ph) ph.remove(); });
+      d.appendChild(ifr); f.appendChild(d);
+    });
+  }
+  if ('IntersectionObserver' in window) {
+    var fo = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting) { fill(e.target); fo.unobserve(e.target); } }); }, { rootMargin: '600px 0px' });
+    Array.prototype.forEach.call(feeds, function(f){ fo.observe(f); });
+  } else { Array.prototype.forEach.call(feeds, fill); }
 
   // composer
   var note = document.getElementById('note'), nameEl = document.getElementById('name'), hint = document.getElementById('hint');
