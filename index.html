@@ -162,7 +162,14 @@ footer a{font-weight:650}
 .portrait img{width:100%;height:100%;object-fit:cover;display:block}
 .portrait .sticker{position:absolute;left:-14px;bottom:56px;background:var(--pink);color:var(--white);font-weight:750;font-size:17px;padding:10px 16px;border-radius:999px;transform:rotate(-6deg)}
 .portrait .sticker2{position:absolute;right:-12px;top:42%;background:var(--white);font-weight:700;font-size:15px;padding:8px 14px;border-radius:999px;transform:rotate(5deg);box-shadow:0 0 0 2px var(--ink)}
-.portrait figcaption{margin-top:22px;font-size:15px;color:var(--ink-soft)}
+.portrait figcaption{margin-top:26px}
+.fullname{display:block;font-size:15px;color:var(--ink-soft);margin-bottom:12px}
+.roles{display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+.role-pill{display:inline-block;font-weight:780;font-size:clamp(19px,2.1vw,24px);line-height:1.1;letter-spacing:-.015em;padding:10px 18px;border-radius:14px;font-variation-settings:"opsz" 48}
+.role-pill.r1{background:var(--ink);color:var(--white);transform:rotate(-1.5deg)}
+.role-pill.r2{background:var(--mango);color:var(--ink);transform:rotate(1deg);margin-left:18px}
+.role-pill.r3{background:var(--pink);color:var(--white);transform:rotate(-.8deg);margin-left:6px}
+@media (max-width:900px){.portrait figcaption{text-align:center}.roles{align-items:center}.role-pill.r2,.role-pill.r3{margin-left:0}}
 .hero .thread{padding:0}
 
 /* story rings */
@@ -249,7 +256,14 @@ footer a{font-weight:650}
       <div class="frame"><img src="assets/himisha.jpg" alt="Portrait of Himisha Talasila Chowdary" width="337" height="422"></div>
       <span class="sticker" aria-hidden="true">50K → 84K</span>
       <span class="sticker2" aria-hidden="true">Hyderabad</span>
-      <figcaption>Himisha Talasila Chowdary. Brand & marketing strategist, creative head, content creator.</figcaption>
+      <figcaption>
+        <span class="fullname">Himisha Talasila Chowdary</span>
+        <span class="roles" role="list" aria-label="Roles">
+          <span class="role-pill r1" role="listitem">Brand &amp; Marketing Strategist</span>
+          <span class="role-pill r2" role="listitem">Creative Head</span>
+          <span class="role-pill r3" role="listitem">Content Creator</span>
+        </span>
+      </figcaption>
     </figure>
   <div class="thread" id="opener" aria-live="polite">
     <div class="day">Today</div>
