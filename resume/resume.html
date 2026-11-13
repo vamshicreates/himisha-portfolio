@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Himisha Talasila Chowdary — Digital Resume</title>
+<style>
+@font-face{font-family:"Bricolage Grotesque";font-style:normal;font-weight:200 800;font-stretch:75% 100%;src:url(fonts/bricolage-grotesque-latin-standard-normal.woff2) format("woff2-variations"),url(fonts/bricolage-grotesque-latin-standard-normal.woff2) format("woff2")}
+@page{size:A4;margin:0}
+:root{--mist:#EDEFF8;--ink:#1E1A3D;--ink-soft:#4A4670;--mango:#FFB627;--pink:#F2547D;--lav:#CFCBF2;--white:#fff;--green:#2BC27C;--orange:#FF8A3D;--f:"Bricolage Grotesque",system-ui,sans-serif}
+*{box-sizing:border-box;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+html,body{margin:0;background:var(--mist)}
+body{font-family:var(--f);font-size:12.5px;line-height:1.42;color:var(--ink)}
+a{color:inherit}
+.page{width:210mm;height:297mm;padding:26px 34px 20px;position:relative;overflow:hidden;page-break-after:always;break-after:page;background:var(--mist);display:flex;flex-direction:column}
+.page:last-child{page-break-after:auto;break-after:auto}
+
+/* bubbles */
+.msg{display:flex;margin:0 0 6px}
+.msg.me{justify-content:flex-end}
+.b{max-width:86%;padding:8px 14px;border-radius:18px;background:var(--white);font-size:13px;line-height:1.38}
+.them .b{border-bottom-left-radius:5px}
+.me .b{background:var(--mango);border-bottom-right-radius:5px;font-weight:650;font-size:12.5px}
+.b a{text-decoration-thickness:1.5px;text-underline-offset:2px;text-decoration-color:var(--pink)}
+.b.big{background:transparent;padding:0 0 4px;font-size:54px;line-height:.96;font-weight:800;letter-spacing:-.025em;font-stretch:88%;max-width:100%}
+.b.note{background:var(--ink);color:#fff}
+.b.note b{color:var(--mango)}
+.tag{font-size:10.5px;font-weight:650;padding:3px 9px;border-radius:999px;background:var(--mist);text-decoration:none;white-space:nowrap}
+
+/* page 1: hero */
+.topline{display:flex;justify-content:space-between;align-items:center;font-size:10.5px;color:var(--ink-soft);margin-bottom:12px}
+.topline b{color:var(--ink);font-weight:700}
+.hero{display:grid;grid-template-columns:236px 1fr;gap:30px;align-items:start}
+.portrait{margin:0}
+.photo{position:relative}
+.frame{border-radius:120px 120px 20px 20px;overflow:hidden;background:var(--mango);aspect-ratio:337/422;box-shadow:0 0 0 6px #fff,0 0 0 7.5px var(--lav)}
+.frame img{width:100%;height:100%;object-fit:cover;display:block}
+.sticker{position:absolute;left:-12px;bottom:34px;background:var(--pink);color:#fff;font-weight:750;font-size:12px;padding:6px 11px;border-radius:999px;transform:rotate(-6deg)}
+.sticker2{position:absolute;right:-12px;top:42%;background:#fff;font-weight:700;font-size:11px;padding:5px 10px;border-radius:999px;transform:rotate(5deg);box-shadow:0 0 0 1.5px var(--ink)}
+.roles{display:flex;flex-direction:column;align-items:flex-start;gap:6px;margin-top:20px}
+.role-pill{display:inline-block;font-weight:780;font-size:14.5px;line-height:1.1;letter-spacing:-.01em;padding:7px 13px;border-radius:10px}
+.r1{background:var(--ink);color:#fff;transform:rotate(-1.5deg)}
+.r2{background:var(--mango);color:var(--ink);transform:rotate(1deg);margin-left:14px}
+.r3{background:var(--pink);color:#fff;transform:rotate(-.8deg);margin-left:4px}
+.fullname{display:block;font-size:11px;color:var(--ink-soft);margin-top:14px}
+.intro .day{font-size:10.5px;color:var(--ink-soft);margin:0 0 10px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.chip{font-size:11px;font-weight:650;border:1.5px solid var(--ink);border-radius:999px;padding:5px 11px;text-decoration:none;color:var(--ink)}
+.chip.go{background:var(--ink);color:#fff}
+.chip.wa{background:var(--green);border-color:var(--green);color:#0F2D22}
+
+/* rings */
+.ringsband{background:#fff;border-radius:20px;margin-top:14px;padding:10px 16px 8px}
+.ringsband h2{margin:0 0 7px;font-size:13px;font-weight:750;line-height:1.2}
+.rings{display:flex;gap:6px;flex:1;justify-content:space-between}
+.ring{width:84px;text-align:center;text-decoration:none}
+.ring .o{display:block;width:50px;height:50px;margin:0 auto 4px;border-radius:50%;padding:2.5px;background:conic-gradient(from 200deg,var(--mango),var(--pink),var(--lav),var(--mango))}
+.ring .i{display:grid;place-items:center;width:100%;height:100%;border-radius:50%;border:2.5px solid #fff;overflow:hidden;font-size:15px;font-weight:800;color:var(--pink);background:#fff}
+.ring .i img{width:100%;height:100%;object-fit:cover}
+.ring b{display:block;font-size:8.5px;font-weight:700;white-space:nowrap;letter-spacing:-.01em;margin:0 -6px}
+.ring small{display:block;font-size:8.5px;color:var(--ink-soft);white-space:nowrap}
+
+/* growth */
+.sec{margin-top:12px}
+.growth{background:var(--ink);color:#fff;border-radius:26px 26px 26px 7px;padding:18px 24px 20px;margin-top:4px;position:relative;overflow:hidden}
+.grow-top{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:center}
+.nums{display:flex;align-items:baseline;gap:.12em;font-weight:800;letter-spacing:-.04em;line-height:.9;font-stretch:80%}
+.from{font-size:42px;color:var(--lav);opacity:.65;text-decoration:line-through;text-decoration-thickness:.07em;text-decoration-color:var(--pink)}
+.to{font-size:104px;color:var(--mango)}
+.to small{font-size:.42em;letter-spacing:-.02em}
+.cap{margin:0;font-size:12.5px;color:#E6E4F7;line-height:1.45}
+.cap b{color:#fff}
+.bars{display:flex;gap:4px;align-items:flex-end;height:30px;margin:12px 0 12px}
+.bars span{flex:1;background:var(--pink);border-radius:3px 3px 0 0}
+.posters{display:grid;grid-template-columns:repeat(6,1fr);gap:7px}
+.poster{position:relative;display:flex;flex-direction:column;justify-content:flex-end;border-radius:11px;overflow:hidden;aspect-ratio:3/4;padding:8px;text-decoration:none;color:var(--ink);background:var(--c)}
+.poster span{font-size:10.5px;font-weight:780;line-height:1.1;letter-spacing:-.01em;position:relative;z-index:1}
+.poster i{position:absolute;top:8px;right:8px;width:20px;height:20px;border-radius:50%;background:var(--ink);display:grid;place-items:center}
+.poster i::after{content:"";border-left:7px solid var(--c);border-top:4.5px solid transparent;border-bottom:4.5px solid transparent;margin-left:2px}
+.poster em{position:absolute;left:8px;top:6px;font-style:normal;font-size:30px;font-weight:800;opacity:.22;letter-spacing:-.04em;line-height:1}
+.growth .links{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.growth .chip{color:#fff;border-color:rgba(255,255,255,.5);font-size:10.5px;padding:4px 10px}
+
+/* page 2: cards */
+.card{background:#fff;border-radius:20px 20px 20px 6px;padding:11px 16px 10px;margin-bottom:8px;display:grid;grid-template-columns:1fr 206px;gap:3px 16px}
+.card .top{grid-column:1/-1;display:flex;gap:11px;align-items:center}
+.mark{width:36px;height:36px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 2px #fff,0 0 0 3.5px var(--mango);flex:none}
+.card h3{margin:0;font-size:19px;line-height:1.1;font-weight:780;letter-spacing:-.015em}
+.card .role{margin:2px 0 0;font-size:11px;color:var(--ink-soft)}
+.when{font-weight:700;color:var(--ink)}
+.card ul{margin:0;padding:0;list-style:none;font-size:11.5px;align-self:start}
+.card li{padding:3px 0;border-top:1px solid #E7E8F2;line-height:1.35}
+.card .foot{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:5px;margin-top:3px}
+.igshot{display:block;border-radius:12px;overflow:hidden;background:#fff;text-decoration:none;border:3px solid var(--b)}
+.igshot img{display:block;width:100%;height:auto;aspect-ratio:980/500}
+.igshot span{display:block;padding:3px 9px;background:var(--b);color:var(--bt);font-size:9.5px;font-weight:700}
+
+/* tickets */
+.tickets{display:grid;grid-template-columns:repeat(3,1fr);gap:11px 10px;margin:8px 0 8px}
+.ticket{position:relative;display:flex;min-height:62px;background:var(--c);color:var(--t);border-radius:11px;text-decoration:none}
+.ticket:nth-child(odd){transform:rotate(-.9deg)}
+.ticket:nth-child(even){transform:rotate(1deg)}
+.ticket::before,.ticket::after{content:"";position:absolute;right:42px;width:14px;height:14px;border-radius:50%;background:var(--mist);margin-right:-7px}
+.ticket::before{top:-7px}.ticket::after{bottom:-7px}
+.tk-main{flex:1;padding:9px 6px 9px 12px;display:flex;flex-direction:column;justify-content:center;min-width:0}
+.tk-no{font-size:9px;font-weight:650;opacity:.7;margin-bottom:2px}
+.tk-main b{font-size:13px;line-height:1.1;font-weight:780;letter-spacing:-.01em}
+.tk-sub{font-size:9.5px;margin-top:3px;opacity:.85;line-height:1.25}
+.tk-stub{flex:none;width:42px;display:grid;place-items:center;border-left:1.5px dashed color-mix(in srgb,var(--t) 45%,transparent)}
+.tk-stub svg{width:20px;height:20px}
+
+/* page 3 */
+.p3cols{display:grid;grid-template-columns:1fr;gap:0}
+.tl{list-style:none;margin:6px 0 0;padding:0;position:relative}
+.tl::before{content:"";position:absolute;left:44px;top:6px;bottom:6px;width:1.5px;background:var(--lav)}
+.tl li{display:grid;grid-template-columns:36px 1fr;gap:24px;padding:5px 0;position:relative}
+.tl li::before{content:"";position:absolute;left:39px;top:11px;width:10px;height:10px;border-radius:50%;background:var(--mist);border:2.5px solid var(--h,var(--ink))}
+.tl li.now::before{background:var(--pink);border-color:var(--pink)}
+.yr{font-weight:750;font-size:12px;padding-top:1px}
+.tl h4{margin:0;font-size:12.5px;font-weight:730;line-height:1.2;color:var(--h,var(--ink))}
+.tl li:nth-child(4n+1){--h:#E0336A}.tl li:nth-child(4n+2){--h:#6A4FD8}.tl li:nth-child(4n+3){--h:#D9670B}.tl li:nth-child(4n+4){--h:#14915A}
+.tl p{margin:1px 0 0;font-size:11px;color:var(--ink-soft)}
+.skills{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:2px 0 4px}
+.skill{background:var(--c);color:var(--t,var(--ink));border-radius:14px;padding:8px 12px}
+.s6{--c:#fff}.s6 b{font-size:13px}
+.s1{--c:var(--ink);--t:#fff;--p:rgba(255,255,255,.14)}
+.s2{--c:var(--mango);--p:rgba(255,255,255,.55)}
+.s3{--c:var(--pink);--t:#fff;--p:rgba(255,255,255,.2)}
+.s4{--c:var(--lav);--p:rgba(255,255,255,.6)}
+.s5{--c:var(--green);--t:#0F2D22;--p:rgba(255,255,255,.45)}
+.skill b{display:block;font-size:13.5px;font-weight:780;letter-spacing:-.01em;margin-bottom:4px}
+.pills{display:flex;flex-wrap:wrap;gap:4px}
+.pills span{font-size:9.5px;font-weight:560;padding:2px 7px;border-radius:999px;background:var(--p)}
+.lang{display:flex;gap:6px;margin-top:2px}
+.lang span{background:#fff;box-shadow:inset 0 0 0 1.5px var(--ink);border-radius:10px;padding:4px 10px;font-weight:650;font-size:11.5px}
+.lang small{display:block;font-weight:450;font-size:9.5px;color:var(--ink-soft)}
+.talk{margin-top:auto;background:var(--ink);color:#fff;border-radius:22px;padding:12px 20px;display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center}
+.talk h3{margin:0 0 3px;font-size:26px;line-height:1;font-weight:800;letter-spacing:-.025em;font-stretch:90%}
+.talk p{margin:0;font-size:11.5px;color:#D9D6F1;max-width:30em}
+.direct{display:flex;flex-direction:column;gap:4px;min-width:215px}
+.direct a,.direct div{background:#fff;color:var(--ink);border-radius:11px;padding:4px 12px;text-decoration:none;font-weight:700;font-size:12px}
+.direct a.wa{background:var(--mango)}
+.direct small{display:block;font-weight:450;color:var(--ink-soft);font-size:9px}
+.foot-note{text-align:center;font-size:9.5px;color:var(--ink-soft);margin-top:6px}
+.foot-note a{font-weight:700}
+</style>
+</head>
+<body>
+
+<!-- ============ PAGE 1 ============ -->
+<section class="page" id="p1">
+  <div class="topline"><b>Digital resume</b><span>Hyderabad, Telangana · all coloured text and images are links</span></div>
+  <div class="hero">
+    <figure class="portrait">
+      <div class="photo"><div class="frame"><img src="../assets/himisha.jpg" alt="Himisha Talasila Chowdary"></div>
+        <span class="sticker">Content at heart</span><span class="sticker2">Hyderabad</span></div>
+      <div class="roles">
+        <span class="role-pill r1">Brand &amp; Marketing Strategist</span>
+        <span class="role-pill r2">Creative Head</span>
+        <span class="role-pill r3">Content Creator</span>
+      </div>
+    </figure>
+    <div class="intro">
+      <div class="day">Today</div>
+      <div class="msg me"><div class="b">hi! who's this?</div></div>
+      <div class="msg them"><div class="b big">Hey, I'm Himisha.</div></div>
+      <div class="msg them"><div class="b note">Welcome to my <b>digital resume</b>. Read it like a chat: a question, then my answer.</div></div>
+      <div class="msg them"><div class="b">I build brands people actually want to follow: the strategy, the reels, the creators, and the events people turn up to.</div></div>
+      <div class="msg them"><div class="b">Right now I'm Creative Head at <a href="https://inflooo.com/">Inflooo</a>, I run social media for <a href="https://www.instagram.com/southindianlogic/">South Indian Logic</a>, and I've just started my own real estate media page, <a href="https://www.instagram.com/legit.spaces/">Legit Spaces</a>.</div></div>
+      <div class="chips">
+        <a class="chip wa" href="https://wa.me/917729925791?text=Hi%20Himisha%2C%20we%20came%20across%20your%20portfolio%20and%20we%27d%20love%20to%20talk%20to%20you%20about%20a%20creative%20role%20at%20our%20company.%20Are%20you%20open%20to%20a%20quick%20chat%20this%20week%3F">WhatsApp +91 77299 25791</a>
+        <a class="chip go" href="https://www.instagram.com/himishachowdary/">@himishachowdary</a>
+        <a class="chip" href="https://himisha-portfolio.vercel.app/">Live website</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="ringsband">
+    <h2>The brands I work with</h2>
+    <nav class="rings">
+      <a class="ring" href="https://www.instagram.com/himishachowdary/"><span class="o"><span class="i"><img src="../assets/himisha.jpg" alt=""></span></span><b>@himishachowdary</b><small>37K, my page</small></a>
+      <a class="ring" href="https://www.instagram.com/southindianlogic/"><span class="o"><span class="i"><img src="../assets/ig-sil.jpg" alt=""></span></span><b>@southindianlogic</b><small>84K</small></a>
+      <a class="ring" href="https://www.instagram.com/inflooo/"><span class="o"><span class="i"><img src="../assets/ig-inflooo.webp" alt=""></span></span><b>@inflooo</b><small>8.6K</small></a>
+      <a class="ring" href="https://www.instagram.com/legit.spaces/"><span class="o"><span class="i"><img src="../assets/ig-legit.webp" alt=""></span></span><b>@legit.spaces</b><small>7.4K, founder</small></a>
+      <a class="ring" href="https://www.instagram.com/sainmacreations/"><span class="o"><span class="i"><img src="../assets/ig-sainma.webp" alt=""></span></span><b>@sainmacreations</b><small>53K, SIL wing</small></a>
+      <a class="ring" href="https://www.instagram.com/realrowdybaby/"><span class="o"><span class="i"><img src="../assets/ig-rowdy.webp" alt=""></span></span><b>@realrowdybaby</b><small>7.4K, SIL wing</small></a>
+      <a class="ring" href="https://www.instagram.com/silplaytelugu/"><span class="o"><span class="i"><img src="../assets/ig-silplay.webp" alt=""></span></span><b>@silplaytelugu</b><small>4.6K, SIL wing</small></a>
+      <a class="ring" href="https://www.youtube.com/@southindianlogic"><span class="o"><span class="i">▶</span></span><b>SIL on YouTube</b><small>Web series</small></a>
+    </nav>
+  </div>
+
+  <div class="sec">
+    <div class="msg me"><div class="b">Ok, what have you actually grown?</div></div>
+    <div class="growth">
+      <div class="grow-top">
+        <div class="nums"><span class="from">50K</span><span class="to">84<small>K</small></span></div>
+        <p class="cap">Instagram followers for <b>South Indian Logic</b>, a Hyderabad studio behind Telugu web series like <i>Dear Kavya</i> and <i>Dil Khush</i>. I helped take the page from about 50,000 to 84,000: <b>over 34,000 new followers, roughly 68% growth</b>, through consistent planning, new creative formats and posting built around what the audience wants.</p>
+      </div>
+      <div class="bars" id="bars"></div>
+      <div class="posters">
+        <a class="poster" style="--c:var(--mango)" href="https://www.youtube.com/watch?v=Vrcjv--S2YA"><em>S1</em><i></i><span>Dear Kavya, Season 1</span></a>
+        <a class="poster" style="--c:var(--pink);color:#fff" href="https://www.youtube.com/watch?v=SkzJStHeeLg"><em>S2</em><i></i><span>Dear Kavya, Season 2</span></a>
+        <a class="poster" style="--c:var(--lav)" href="https://www.youtube.com/watch?v=EG7QcVFNMrA"><em>DK</em><i></i><span>Dil Khush</span></a>
+        <a class="poster" style="--c:var(--green);color:#0F2D22" href="https://www.youtube.com/watch?v=-tToPls7fYk"><em>V</em><i></i><span>Vennela</span></a>
+        <a class="poster" style="--c:var(--orange)" href="https://www.youtube.com/watch?v=PsVxLQv8_e4"><em>TM</em><i></i><span>Telugu Medium</span></a>
+        <a class="poster" style="--c:#fff" href="https://www.youtube.com/watch?v=nZlUBPP--ps"><em>AM</em><i></i><span>Arranged Marriage</span></a>
+      </div>
+      <div class="links">
+        <a class="chip" href="https://www.instagram.com/southindianlogic/">See @southindianlogic</a>
+        <a class="chip" href="https://www.youtube.com/@southindianlogic">Watch their series on YouTube</a>
+      </div>
+    </div>
+    <div class="msg them" style="margin-top:8px"><div class="b">At Inflooo I look after the digital presence of around <b>10 brand accounts</b>, each in a different industry with its own voice. On my own page, <a href="https://www.instagram.com/himishachowdary/">@himishachowdary</a>, about <b>37K people</b> follow along.</div></div>
+  </div>
+</section>
+
+<!-- ============ PAGE 2 ============ -->
+<section class="page" id="p2">
+  <div class="msg me"><div class="b">What are you working on right now?</div></div>
+  <div class="msg them"><div class="b">Three things, all at once.</div></div>
+
+  <article class="card">
+    <div class="top"><img class="mark" src="../assets/ig-inflooo.webp" alt=""><div><h3>Inflooo</h3><p class="role">Creative Head, Brand Management &amp; Marketing · <span class="when">Sep 2025 to now</span></p></div></div>
+    <ul>
+      <li>Brand positioning, content direction and communication plans for multiple businesses</li>
+      <li>Creative ideation: reels, statics, scripts, briefs, hooks and calls to action</li>
+      <li>Finding and coordinating micro and nano creators, and keeping brand and creator on the same page</li>
+      <li>Helping build original content IPs: formats and recurring content properties</li>
+    </ul>
+    <a class="igshot" style="--b:#FFB627;--bt:var(--ink)" href="https://www.instagram.com/inflooo/"><img src="../assets/profile-inflooo.webp" alt=""><span>Open @inflooo on Instagram</span></a>
+    <div class="foot"><span class="tag" style="background:#FFF1D1">Influencer marketing company, Hyderabad</span><a class="tag" href="https://inflooo.com/">inflooo.com</a><a class="tag" href="https://www.instagram.com/inflooo/">@inflooo</a></div>
+  </article>
+
+  <article class="card">
+    <div class="top"><img class="mark" src="../assets/ig-sil.jpg" alt=""><div><h3>South Indian Logic</h3><p class="role">Social Media Manager, Creative &amp; Content Strategy · <span class="when">Jan 2026 to now</span></p></div></div>
+    <ul>
+      <li>Content calendars and publishing plans for web series, short-form videos and Instagram</li>
+      <li>New post and reel formats to grow organic reach</li>
+      <li>Promoting series launches and tracking audience growth</li>
+    </ul>
+    <a class="igshot" style="--b:#F2547D;--bt:#fff" href="https://www.instagram.com/southindianlogic/"><img src="../assets/profile-sil.webp" alt=""><span>Open @southindianlogic on Instagram</span></a>
+    <div class="foot"><span class="tag" style="background:#FDE0E8">Telugu entertainment studio</span><a class="tag" href="https://www.instagram.com/southindianlogic/">@southindianlogic</a><a class="tag" href="https://www.youtube.com/@southindianlogic">YouTube</a><a class="tag" href="https://southindianlogic.com/">southindianlogic.com</a></div>
+  </article>
+
+  <article class="card">
+    <div class="top"><img class="mark" src="../assets/ig-legit.webp" alt=""><div><h3>Legit Spaces</h3><p class="role">Founder, Brand Development &amp; Content Strategy · <span class="when">Oct 2026 to now</span></p></div></div>
+    <ul>
+      <li>My own real estate media brand for Hyderabad and Telangana. The promise: <b>No brokers. No bias.</b></li>
+      <li>I built the positioning, identity and visual direction</li>
+      <li>Short videos that explain HMDA, RERA, DTCP, EC, patta, mutation and property papers in plain language</li>
+    </ul>
+    <a class="igshot" style="--b:#6A4FD8;--bt:#fff" href="https://www.instagram.com/legit.spaces/"><img src="../assets/profile-legit.webp" alt=""><span>Open @legit.spaces on Instagram</span></a>
+    <div class="foot"><span class="tag" style="background:var(--lav)">Real estate media</span><a class="tag" href="https://www.instagram.com/legit.spaces/">@legit.spaces</a></div>
+  </article>
+
+  <div class="msg me" style="margin-top:6px"><div class="b">Can you take it off the screen too?</div></div>
+  <div class="msg them"><div class="b">That's my favourite part. Some of what I've helped dream up, promote and run with creators:</div></div>
+  <div class="tickets">
+    <div class="ticket" style="--c:var(--mango);--t:var(--ink)"><div class="tk-main"><span class="tk-no">No. 01</span><b>Street runs</b><span class="tk-sub">Community runs with creators</span></div><div class="tk-stub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 4a2 2 0 1 0 4 0 2 2 0 0 0-4 0M7 21l3-6 3 2v5M10 15l1-5 4 3 3-1M11 10l-3 1-2 3"/></svg></div></div>
+    <div class="ticket" style="--c:var(--pink);--t:#fff"><div class="tk-main"><span class="tk-no">No. 02</span><b>Pickleball activations</b><span class="tk-sub">Brand moments on court</span></div><div class="tk-stub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="6"/><path d="M13.5 13.5 20 20M7 8h.01M10 7h.01M9 11h.01"/></svg></div></div>
+    <div class="ticket" style="--c:var(--lav);--t:var(--ink)"><div class="tk-main"><span class="tk-no">No. 03</span><b>A friendship-themed race</b><span class="tk-sub">Run with your people</span></div><div class="tk-stub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></div></div>
+    <div class="ticket" style="--c:var(--ink);--t:#fff"><div class="tk-main"><span class="tk-no">No. 04</span><b>Influencer trips</b><span class="tk-sub">Creators, one itinerary</span></div><div class="tk-stub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13l18-8-6 16-3-7-9-1z"/></svg></div></div>
+    <div class="ticket" style="--c:var(--green);--t:#0F2D22"><div class="tk-main"><span class="tk-no">No. 05</span><b>Free hearing-screening camps</b><span class="tk-sub">At old-age homes, for a healthcare client</span></div><div class="tk-stub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 9a5 5 0 0 1 10 0c0 3-3 4-3 7a3 3 0 0 1-6 0M10 9a2 2 0 0 1 4 0"/></svg></div></div>
+    <div class="ticket" style="--c:var(--orange);--t:var(--ink)"><div class="tk-main"><span class="tk-no">No. 06</span><b>Billboards and pamphlets</b><span class="tk-sub">Offline ads that match the online story</span></div><div class="tk-stub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="11" rx="1.5"/><path d="M8 15v5M16 15v5M7 9h10"/></svg></div></div>
+  </div>
+  <div class="msg them"><div class="b">I handle the idea, the promotion, the creator coordination and the posts around it, so the event and the feed tell the same story.</div></div>
+</section>
+
+<!-- ============ PAGE 3 ============ -->
+<section class="page" id="p3">
+  <div class="msg me"><div class="b">Wait, you studied engineering? How did you end up here?</div></div>
+  <div class="msg them"><div class="b">It's less of a jump than it looks. Theatre taught me audiences, engineering taught me structure, and Amazon taught me to check every detail.</div></div>
+  <ol class="tl">
+    <li><span class="yr">2014</span><div><h4>Cambridge IGCSE, Reqelford International School</h4><p>Seven subjects with Distinction. Inter-school basketball and art competitions.</p></div></li>
+    <li><span class="yr">2018</span><div><h4>Senior Secondary (CBSE), MPC with English and Visual Arts</h4><p>Cultural Secretary of the Student Council: school-wide cultural and sports events. Dance, basketball, debate, visual arts.</p></div></li>
+    <li><span class="yr">2020</span><div><h4>B.Tech, Electronics &amp; Instrumentation, VNR VJIET</h4><p>Creative Head of the Dramatix acting club and its stage plays. Helped plan Scintillations, the college culture fest, and N-Army, a sustainability drive.</p></div></li>
+    <li><span class="yr">2020</span><div><h4>Freelance marketing for a healthcare organisation</h4><p>Ran Instagram, LinkedIn and YouTube, awareness campaigns, hearing-screening camps, billboards and pamphlets, alongside college.</p></div></li>
+    <li><span class="yr">2024</span><div><h4>Quality Specialist, Maps Operations, Amazon</h4><p>Address resolution, geocode fixes and map-edit checks. Where I learnt process, error analysis and working across teams.</p></div></li>
+    <li><span class="yr">2025</span><div><h4>Creative Head, Inflooo</h4><p>Back to brands, creators and campaigns, full time.</p></div></li>
+    <li><span class="yr">2026</span><div><h4>Social Media Manager, South Indian Logic</h4><p>Telugu web series and short-form entertainment. Plus my own work in front of the camera: short-form series, web series and OTT-related projects.</p></div></li>
+    <li class="now"><span class="yr">Now</span><div><h4>Founded Legit Spaces</h4><p>Real estate, explained honestly.</p></div></li>
+  </ol>
+
+  <div class="msg me" style="margin-top:6px"><div class="b">So what would you bring to my team?</div></div>
+  <div class="msg them"><div class="b">Someone who can think up the idea and also ship it. Here's the toolkit:</div></div>
+  <div class="skills">
+    <div class="skill s1"><b>Brand &amp; marketing</b><div class="pills"><span>Brand management</span><span>Positioning</span><span>Marketing strategy</span><span>Campaign management</span><span>Audience research</span><span>Marketing communication</span></div></div>
+    <div class="skill s2"><b>Creative &amp; content</b><div class="pills"><span>Creative direction</span><span>Scriptwriting</span><span>Storytelling</span><span>Copywriting</span><span>Short-form video strategy</span><span>Creative briefs</span><span>Entertainment &amp; OTT content</span></div></div>
+    <div class="skill s3"><b>Social &amp; digital</b><div class="pills"><span>Instagram</span><span>LinkedIn</span><span>YouTube</span><span>Content calendars</span><span>Organic growth</span><span>Meta Business Suite</span><span>Canva</span><span>Short-form editing</span></div></div>
+    <div class="skill s4"><b>Creators &amp; events</b><div class="pills"><span>Influencer marketing</span><span>Creator management</span><span>Brand collaborations</span><span>Activations</span><span>Community engagement</span></div></div>
+    <div class="skill s5"><b>Leading the work</b><div class="pills"><span>Creative leadership</span><span>Team coordination</span><span>Project management</span><span>Client communication</span><span>Problem-solving</span></div></div>
+    <div class="skill s6"><b>I talk to your audience in their language</b><div class="lang"><span>Telugu<small>Native</small></span><span>English<small>Professional</small></span><span>Hindi<small>Professional</small></span></div></div>
+  </div>
+
+  <div class="msg me" style="margin-top:6px"><div class="b">Ok, I'm in. How do we start?</div></div>
+  <div class="talk">
+    <div><h3>Your turn.</h3><p>Tell me what you're working on. I'll take it from there.</p></div>
+    <div class="direct">
+      <a class="wa" href="https://wa.me/917729925791?text=Hi%20Himisha%2C%20we%20came%20across%20your%20portfolio%20and%20we%27d%20love%20to%20talk%20to%20you%20about%20a%20creative%20role%20at%20our%20company.%20Are%20you%20open%20to%20a%20quick%20chat%20this%20week%3F"><small>WhatsApp</small>+91 77299 25791</a>
+      <a href="https://www.instagram.com/himishachowdary/"><small>Instagram</small>@himishachowdary</a>
+      <div><small>Based in</small>Hyderabad, Telangana</div>
+    </div>
+  </div>
+  <div class="foot-note">The live version, with her feed and Instagram posts: <a href="https://himisha-portfolio.vercel.app/">himisha-portfolio.vercel.app</a></div>
+</section>
+
+<script>
+(function(){var b=document.getElementById('bars'),n=22;for(var i=0;i<n;i++){var s=document.createElement('span'),v=50+34*Math.pow(i/(n-1),1.15);s.style.height=((v-40)/44*100)+'%';b.appendChild(s)}})();
+</script>
+</body>
+</html>
